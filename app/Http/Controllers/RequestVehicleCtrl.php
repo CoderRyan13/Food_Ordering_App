@@ -11,11 +11,9 @@ class RequestVehicleCtrl extends Controller
     public function request_vehicle(Request $request) {
         date_default_timezone_set("America/Belize");
 
-        if (date('Y-m-d H:i:s', strtotime ($request->timeout_date . '+3 minutes')) < date('Y-m-d H:i:s')) {
-            echo "<h1>Can not use a date that has already passed to request a vehicle.</h1>";
-            echo "<script>setTimeout(\"location.href = '/';\",3000);</script>";
-            return;
-        }
+        if($request->supervisor == NULL || $request->timeout_date == NULL || $request->destination == NULL || $request->purpose == NULL || $request->driver == NULL) { return json_encode('f'); }
+
+        if (date('Y-m-d H:i:s', strtotime ($request->timeout_date . '+3 minutes')) < date('Y-m-d H:i:s')) { return json_encode('p'); }
 
         $fields = [
             'supervisor'        => $request->supervisor,
@@ -35,11 +33,9 @@ class RequestVehicleCtrl extends Controller
                 $message->from('ryanarmstrong@westracbelize.com', 'Westrac Ltd Vehicle Request');
             });
 
-            echo "<h1>Your request was sent successfully</h1>";
-            echo "<script>setTimeout(\"location.href = '/';\",3000);</script>";
+            return json_encode('s');
         } else {
-            echo "Your request could not be created at this moment";
-            echo "<script>setTimeout(\"location.href = '/';\",3000);</script>";
+            return json_encode('e');
         }
     }
 

@@ -22,39 +22,78 @@
         
         <div class="card custom-card col-lg-4 col-md-6 col-sm-10 px-4 py-3">
             <h3 class="text-center text-primary">Request Vehicle Form</h3>
-            <form action="{{ url('/request_vehicle') }}" role="form" method="post">
-                @csrf
+            <div>
                 <div class="mt-2">
                     <label>Requested By</label>
                     <select name="supervisor" class="form-control supervisor" required></select>
                 </div>
                 <div class="mt-2">
                     <label>Time OUT Date</label>
-                    <input type="text" class="form-control" id="datetime" name="timeout_date" value="<?php date_default_timezone_set("America/Belize"); echo date('Y-m-d H:i:s') ?>" required>
+                    <input type="text" class="form-control timeout-date" id="datetime" name="timeout_date" value="<?php date_default_timezone_set("America/Belize"); echo date('Y-m-d H:i:s') ?>" required>
                 </div>
                 <div class="mt-2">
                     <label>Place of Destination</label>
-                    <input type="text" class="form-control" name="destination" required>
+                    <input type="text" class="form-control destination" name="destination" required>
                 </div>
                 <div class="mt-2">
                     <label>Purpose of Trip</label>
-                    <input type="text" class="form-control" name="purpose" required>
+                    <input type="text" class="form-control purpose" name="purpose" required>
                 </div>
                 <div class="mt-2">
-                    <label>Preferred Vehicle</label>
-                    <input type="text" class="form-control" name="preferred_vehicle">
+                    <label>Preferred Vehicle (Optional)</label>
+                    <input type="text" class="form-control preferred-vehicle" name="preferred_vehicle">
                 </div>
                 <div class="mt-2">
                     <label>Driver</label>
                     <select name="driver" class="form-control driver" required></select>
                 </div>
-                <button class="btn btn-success mt-4 form-control">Submit</button>
-            </form>
+                <button class="btn btn-success mt-4 form-control submit">Submit</button>
+            </div>
         </div>
     </div>
     <span class="d-flex justify-content-end"><a href="{{ url('/admin') }}" class="text-decoration-none text-black me-2">Admin</a></span>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="toastAlert" class="toast colored-toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toastHead toast-header text-fixed-white">
+                <img class="bd-placeholder-img rounded me-2" src="{{url('/')}}/westrac_icon.png" alt="..." style="width: 20px;">
+                <strong class="me-auto toastAlertTitle text-white"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body toastAlertBody text-fixed-white"></div>
+        </div>
+    </div>
 </body>
 <script>
+    let display_alert = (title, text, class_name) => {
+        if (0 == class_name) {
+            class_name = 'bg-danger-subtle';
+            class_head = 'bg-danger';
+        }
+        else if (1 == class_name) {
+            class_name = 'bg-success-subtle';
+            class_head = 'bg-success';
+        }
+        else if (2 == class_name) {
+            class_name = 'bg-info-subtle';
+            class_head = 'bg-info';
+        }
+        else if (3 == class_name) {
+            class_name = 'bg-warning-subtle';
+            class_head = 'bg-warning';
+        }
+
+        $('#toastAlert').addClass(class_name);
+        $('.toastHead').addClass(class_head);
+        $('.toastAlertTitle').html(title);
+        $('.toastAlertBody').html(text);
+
+        const _toast = document.getElementById('toastAlert')
+        const toast = new bootstrap.Toast(_toast);
+        toast.show();
+    }
+
     $(document)
         .ready(function(e) {
             flatpickr("#date", {});
@@ -109,6 +148,44 @@
 
             $('.driver').select2();
             $('.supervisor').select2();
+        })
+        .on('click', '.submit', function(e) {
+            $('.submit').prop( "disabled", true);
+            $.ajax({
+				type		: 'POST',
+				url		: "{{url ('/')}}/request_vehicle",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+				dataType	: 'json',
+                data : {
+                    'supervisor'        : $('.supervisor').val(),
+                    'timeout_date'      : $('.timeout-date').val(),
+                    'destination'       : $('.destination').val(),
+                    'purpose'           : $('.purpose').val(),
+                    'preferred_vehicle' : $('.preferred-vehicle').val(),
+                    'driver'            : $('.driver').val(),
+                },
+				success	: function (data) {
+                    if (data.trim() == 'f') {
+                        display_alert ('Request Vehicle', 'All mandatory fields required.', 3);
+                        setTimeout("location.href = '/';",2000);
+                    } else if (data.trim() == 'p') {
+                        display_alert ('Request Vehicle', 'Cannot use a date and time that has already passed to request a vehicle.', 3);
+                        setTimeout("location.href = '/';",2000);
+                    } else if (data.trim() == 's') {
+                        display_alert ('Request Vehicle', 'Your vehicle was requested successfully.', 1);
+                        setTimeout("location.href = '/';",2000);
+                    } else if (data.trim() == 'e') {
+                        display_alert ('Request Vehicle', 'Your vehicle could not be requested at this moment.', 0);
+                        setTimeout("location.href = '/';",2000);
+                    }
+				},
+				error		: function (request, status, error) {
+					console.log (request.status, request.responseText);
+				},
+				async		: false
+			});
         })
 </script>
 </html>
