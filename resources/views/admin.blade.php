@@ -326,6 +326,10 @@
             $('.modal-title').html(`Edit Approve Vehicle Request`);
             $('.modal-body').html(`
                 <div class="row">
+                    <div class="mb-2"> 
+                        <label>Driver: </label>
+                        <select class="form-control edit_selected_driver"></select>
+                    </div>
                     <div class="mb-2">
                         <label>Time OUT Date</label>
                         <input type="text" class="timeout-date form-control" id="datetime">
@@ -344,6 +348,29 @@
                     <button type="button" id="${id}" class="btn btn-primary apply-edit">Apply</button>
                 </div>
             `);
+
+            $.ajax({
+				type		: 'POST',
+				url		: "{{url ('/')}}/get_all_drivers",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+				dataType	: 'json',
+				success	: function (data) {
+                    let finalHTML = '<option value="">-</option>';
+
+                    $.each(data, function(key, val) {
+                        finalHTML += ` <option value="${val.driver}">${val.driver}</option> `;
+                    });
+
+                    $('.edit_selected_driver').append(finalHTML);
+                    $('.edit_selected_driver').select2({dropdownParent: $("#openModal"), width: '90%'});
+				},
+				error		: function (request, status, error) {
+					console.log (request.status, request.responseText);
+				},
+				async		: false
+			});
 
             $.ajax({
                 type		: 'POST',
@@ -383,9 +410,10 @@
                 type		: 'POST',
                 url		: "{{url ('/')}}/edit_approved",
                 data    : {
-                    'id' : id,
-                    'timeout_date' : $('.timeout-date').val(),
-                    'timein_date' : $('.timein-date').val(),
+                    'id'               : id,
+                    'driver'           : $('.edit_selected_driver').val(),
+                    'timeout_date'     : $('.timeout-date').val(),
+                    'timein_date'      : $('.timein-date').val(),
                     'approved_vehicle' : $('.edit_selected_vehicle').val(),
                 },
                 headers: {

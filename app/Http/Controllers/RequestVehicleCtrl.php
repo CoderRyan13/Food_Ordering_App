@@ -153,11 +153,25 @@ class RequestVehicleCtrl extends Controller
     }
 
     public function edit_approved(Request $request) {
-        if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0) {
+        if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) == 0) {
             return json_encode('e');
         }
 
-        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0) {
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $updates = [
+                'driver'  => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             $time_out = DB::select("SELECT timeout_date FROM vehicle_request WHERE id = $id");
@@ -179,7 +193,7 @@ class RequestVehicleCtrl extends Controller
             }
         }
 
-        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0) {
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             $updates = [
@@ -193,7 +207,7 @@ class RequestVehicleCtrl extends Controller
             }
         }
 
-        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0) {
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             $updates = [
@@ -207,7 +221,7 @@ class RequestVehicleCtrl extends Controller
             }
         }
 
-        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0) {
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             if($request->timeout_date > $request->timein_date) {
@@ -226,7 +240,7 @@ class RequestVehicleCtrl extends Controller
             }
         }
 
-        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0) {
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             $time_out = DB::select("SELECT timeout_date FROM vehicle_request WHERE id = $id");
@@ -236,11 +250,10 @@ class RequestVehicleCtrl extends Controller
             if($out_date > $request->timein_date) {
                 return json_encode('i');
             }
-            return;
 
             $updates = [
                 'timein_date'      => date('Y-m-d H:i:s', strtotime ($request->timein_date)),
-                'approved_vehicle' => date('Y-m-d H:i:s', strtotime ($request->approved_vehicle)),
+                'approved_vehicle' => $request->approved_vehicle,
             ];
             
             if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
@@ -250,12 +263,145 @@ class RequestVehicleCtrl extends Controller
             }
         }
 
-        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) != 0) {
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) == 0) {
             $id = $request->id;
 
             $updates = [
                 'timeout_date'     => date('Y-m-d H:i:s', strtotime ($request->timeout_date)),
-                'approved_vehicle' => date('Y-m-d H:i:s', strtotime ($request->approved_vehicle)),
+                'approved_vehicle' => $request->approved_vehicle,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $time_out = DB::select("SELECT timeout_date FROM vehicle_request WHERE id = $id");
+
+            $out_date = $time_out[0]->timeout_date;
+            
+            if($out_date > $request->timein_date) {
+                return json_encode('i');
+            }
+
+            $updates = [
+                'timein_date'   => date('Y-m-d H:i:s', strtotime ($request->timein_date)),
+                'driver'        => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $updates = [
+                'timeout_date'   => date('Y-m-d H:i:s', strtotime ($request->timeout_date)),
+                'driver'         => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $updates = [
+                'approved_vehicle' => $request->approved_vehicle,
+                'driver'           => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) == 0) {
+            $id = $request->id;
+
+            if($request->timeout_date > $request->timein_date) {
+                return json_encode('i');
+            }
+
+            $updates = [
+                'timein_date'      => date('Y-m-d H:i:s', strtotime ($request->timein_date)),
+                'timeout_date'     => date('Y-m-d H:i:s', strtotime ($request->timeout_date)),
+                'approved_vehicle' => $request->approved_vehicle,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) == 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            if($request->timeout_date > $request->timein_date) {
+                return json_encode('i');
+            }
+
+            $updates = [
+                'timein_date'      => date('Y-m-d H:i:s', strtotime ($request->timein_date)),
+                'timeout_date'     => date('Y-m-d H:i:s', strtotime ($request->timeout_date)),
+                'driver'           => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) != 0 && strlen($request->timeout_date) == 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $time_out = DB::select("SELECT timeout_date FROM vehicle_request WHERE id = $id");
+
+            $out_date = $time_out[0]->timeout_date;
+            
+            if($out_date > $request->timein_date) {
+                return json_encode('i');
+            }
+
+            $updates = [
+                'timein_date'      => date('Y-m-d H:i:s', strtotime ($request->timein_date)),
+                'approved_vehicle' => $request->approved_vehicle,
+                'driver'           => $request->driver,
+            ];
+            
+            if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
+                return json_encode('y');
+            } else {
+                return json_encode('n');
+            }
+        }
+
+        else if (strlen($request->timein_date) == 0 && strlen($request->timeout_date) != 0 && strlen($request->approved_vehicle) != 0 && strlen($request->driver) != 0) {
+            $id = $request->id;
+
+            $updates = [
+                'timeout_date'     => date('Y-m-d H:i:s', strtotime ($request->timeout_date)),
+                'approved_vehicle' => $request->approved_vehicle,
+                'driver'           => $request->driver,
             ];
             
             if (DB::table('public.vehicle_request')->where ('id', $id)->update($updates)) {
@@ -273,6 +419,7 @@ class RequestVehicleCtrl extends Controller
             }
     
             $updates = [
+                'driver'            => $request->driver,
                 'timein_date'       => $request->timein_date,
                 'timeout_date'      => $request->timeout_date,
                 'approved_vehicle'  => $request->approved_vehicle
