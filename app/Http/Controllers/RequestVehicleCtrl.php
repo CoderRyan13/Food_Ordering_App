@@ -13,7 +13,7 @@ class RequestVehicleCtrl extends Controller
 
         if($request->supervisor == NULL || $request->timeout_date == NULL || $request->destination == NULL || $request->purpose == NULL || $request->driver == NULL) { return json_encode('f'); }
 
-        if (date('Y-m-d H:i:s', strtotime ($request->timeout_date . '+3 minutes')) < date('Y-m-d H:i:s')) { return json_encode('p'); }
+        if (date('Y-m-d H:i:s', strtotime ($request->timeout_date . '+60 minutes')) < date('Y-m-d H:i:s')) { return json_encode('p'); }
 
         $fields = [
             'supervisor'        => $request->supervisor,
@@ -30,7 +30,7 @@ class RequestVehicleCtrl extends Controller
 
             Mail::send('mail.email', $data, function($message) {
                 $message->to('henrywiebe@westracbelize.com', 'Fleet Coordinator')->subject("New Vehicle Request");
-                $message->from('ryanarmstrong@westracbelize.com', 'Westrac Ltd Vehicle Request');
+                $message->from('henrywiebe@westracbelize.com', 'Westrac Ltd Vehicle Request');
             });
 
             return json_encode('s');
@@ -91,7 +91,7 @@ class RequestVehicleCtrl extends Controller
 
             Mail::send('mail.email-approve', $data, function($message) use($sup_email) {
                 $message->to($sup_email, 'Response')->subject("Vehicle Request Response");
-                $message->from('ryanarmstrong@westracbelize.com', 'Westrac Ltd Vehicle Request');
+                $message->from('henrywiebe@westracbelize.com', 'Westrac Ltd Vehicle Request');
             });
 
             return json_encode('y');
@@ -129,7 +129,7 @@ class RequestVehicleCtrl extends Controller
 
             Mail::send('mail.email-deny', $data, function($message) use($sup_email) {
                 $message->to($sup_email, 'Response')->subject("Vehicle Request Response");
-                $message->from('ryanarmstrong@westracbelize.com', 'Westrac Ltd Vehicle Request');
+                $message->from('henrywiebe@westracbelize.com', 'Westrac Ltd Vehicle Request');
             });
 
             return json_encode('y');

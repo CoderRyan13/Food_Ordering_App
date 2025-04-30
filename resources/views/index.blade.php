@@ -169,16 +169,16 @@
 				success	: function (data) {
                     if (data.trim() == 'f') {
                         display_alert ('Request Vehicle', 'All mandatory fields required.', 3);
-                        setTimeout("location.href = '/';",2000);
+                        setTimeout("location.href = '/';",2500);
                     } else if (data.trim() == 'p') {
                         display_alert ('Request Vehicle', 'Cannot use a date and time that has already passed to request a vehicle.', 3);
-                        setTimeout("location.href = '/';",2000);
+                        setTimeout("location.href = '/';",2500);
                     } else if (data.trim() == 's') {
                         display_alert ('Request Vehicle', 'Your vehicle was requested successfully.', 1);
-                        setTimeout("location.href = '/';",2000);
+                        setTimeout("location.href = '/';",2500);
                     } else if (data.trim() == 'e') {
                         display_alert ('Request Vehicle', 'Your vehicle could not be requested at this moment.', 0);
-                        setTimeout("location.href = '/';",2000);
+                        setTimeout("location.href = '/';",2500);
                     }
 				},
 				error		: function (request, status, error) {
