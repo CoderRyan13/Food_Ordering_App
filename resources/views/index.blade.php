@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ env('APP_NAME') }}</title>
     <meta name="csrf-token" content="{{csrf_token ()}}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -80,32 +82,38 @@
                     <ul class="mt-2 d-flex flex-column nav nav-tabs" style="list-style-type: none;" role="tablist">
                         <li class="nav-item allmenu d-flex align-items-center justify-content-center mb-3 menu">
                             <a class="nav-link active text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#allmenu" aria-selected="true" style="margin-left: -15px;">
-                                <i class="bx bxs-grid-alt"></i>
+                                <i class="ri-restaurant-fill"></i>
                                 <span class="nav-item ms-2">All Menu</span>
                             </a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
-                            <a class="nav-link text-decoration-none text-white food px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#food" aria-selected="true" style="margin-left: -15px;">
-                                <i class="bx bx-calendar"></i>
-                                <span class="nav-item ms-2">Food</span>
+                            <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#breakfast" aria-selected="true" style="margin-left: -15px;">
+                                <i class="ri-bread-line"></i>
+                                <span class="nav-item ms-2">Breakfast</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
+                            <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#lunch" aria-selected="true" style="margin-left: -15px;">
+                                <i class="ri-bowl-fill"></i>
+                                <span class="nav-item ms-2">Lunch</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
+                            <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#kids" aria-selected="true" style="margin-left: -15px;">
+                                <i class="ri-group-3-line"></i>
+                                <span class="nav-item ms-2">Kids</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
+                            <a class="nav-link text-decoration-none text-white food px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#side-orders" aria-selected="true" style="margin-left: -15px;">
+                                <i class="ri-restaurant-2-fill"></i>
+                                <span class="nav-item ms-2">Side Orders</span>
                             </a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
                             <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#drinks" aria-selected="true" style="margin-left: -15px;">
-                                <i class="bx bx-user"></i>
+                                <i class="ri-drinks-line"></i>
                                 <span class="nav-item ms-2">Drinks</span>
-                            </a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
-                            <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#dessert" aria-selected="true" style="margin-left: -15px;">
-                                <i class="bx bx-car"></i>
-                                <span class="nav-item ms-2">Dessert</span>
-                            </a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
-                            <a class="nav-link text-decoration-none text-white px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#starter" aria-selected="true" style="margin-left: -15px;">
-                                <i class="bx bx-body"></i>
-                                <span class="nav-item ms-2">Starter</span>
                             </a>
                         </li>
                     </ul>
@@ -114,41 +122,16 @@
                     <div class="tab-content mt-2 mt-xl-0">
                         <div class="tab-pane show active text-white" id="allmenu" role="tabpanel">
                             <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                                <!-- Breakfast Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
-                                            <div class="fs-4 fw-bold food-item">Curry</div>
-                                            <div style="font-size: 12px;">a diverse category of dishes characterized by a sauce or gravy seasoned with spices, originating from the Indian subcontinent and now found globally.</div>
+                                            <div class="fs-4 fw-bold food-item">Midway Breakfast</div>
+                                            <div style="font-size: 12px;">Eggs cooked to your preference accompanied with refried beans, bacon, cheese, and fry jacks.</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$50</div>
-                                                <button id="Curry" value="50" class="btn btn-sm btn-warning add">ADD</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card custom-card">
-                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/salad.webp" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
-                                        <div>
-                                            <div class="fs-4 fw-bold food-item">Salad</div>
-                                            <div style="font-size: 12px;">a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, etc.</div>
-                                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$30</div>
-                                                <button id="Salad" value="30" class="btn btn-sm btn-warning add">ADD</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card custom-card">
-                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/frychicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
-                                        <div>
-                                            <div class="fs-4 fw-bold food-item">Fry Chicken</div>
-                                            <div style="font-size: 12px;">a dish where chicken pieces are coated in seasoned flour or batter and then cooked in hot oil or fat, resulting in a crispy exterior and tender, juicy interior.</div>
-                                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$10</div>
-                                                <button id="Fry&nbsp;Chicken" value="10" class="btn btn-sm btn-warning add">ADD</button>
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Midway Breakfast" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
                                             </div>
                                         </div>
                                     </div>
@@ -157,37 +140,11 @@
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
-                                            <div class="fs-4 fw-bold food-item">Curry</div>
-                                            <div style="font-size: 12px;">a diverse category of dishes characterized by a sauce or gravy seasoned with spices, originating from the Indian subcontinent and now found globally.</div>
+                                            <div class="fs-4 fw-bold food-item">Spanish Breakfast</div>
+                                            <div style="font-size: 12px;">Scrambled eggs with onions and local greens or tomatoes accompanied with refried beans, cream, cheese, fried plantains and corn or flour tortilla.</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$50</div>
-                                                <button id="Curry" value="50" class="btn btn-sm btn-warning add">ADD</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card custom-card">
-                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/salad.webp" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
-                                        <div>
-                                            <div class="fs-4 fw-bold food-item">Salad</div>
-                                            <div style="font-size: 12px;">a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, etc.</div>
-                                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$30</div>
-                                                <button id="Salad" value="30" class="btn btn-sm btn-warning add">ADD</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card custom-card">
-                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/frychicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
-                                        <div>
-                                            <div class="fs-4 fw-bold food-item">Fry Chicken</div>
-                                            <div style="font-size: 12px;">a dish where chicken pieces are coated in seasoned flour or batter and then cooked in hot oil or fat, resulting in a crispy exterior and tender, juicy interior.</div>
-                                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$10</div>
-                                                <button id="Fry&nbsp;Chicken" value="10" class="btn btn-sm btn-warning add">ADD</button>
+                                                <div class="fw-bold">$15.75</div>
+                                                <button id="Spanish Breakfast" value="15.75" class="btn btn-sm btn-warning add">ADD</button>
                                             </div>
                                         </div>
                                     </div>
@@ -196,74 +153,2107 @@
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
-                                            <div class="fs-4 fw-bold food-item">Curry</div>
-                                            <div style="font-size: 12px;">a diverse category of dishes characterized by a sauce or gravy seasoned with spices, originating from the Indian subcontinent and now found globally.</div>
+                                            <div class="fs-4 fw-bold food-item">Huevos Rancheros</div>
+                                            <div style="font-size: 12px;">Sunny side-up eggs on a bed of corn tortillas, tapped with a chef-style tomato salsa, parmesan cheese, refried beans and your choice of bacon, ham or sausage.</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$50</div>
-                                                <button id="Curry" value="50" class="btn btn-sm btn-warning add">ADD</button>
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Huevos Rancheros" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/salad.webp" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
-                                            <div class="fs-4 fw-bold food-item">Salad</div>
-                                            <div style="font-size: 12px;">a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, etc.</div>
+                                            <div class="fs-4 fw-bold food-item">English Breakfast</div>
+                                            <div style="font-size: 12px;">Sunny side-up eggs served with bacon, sausage, grilled tomato, baked beans and toast.</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$30</div>
-                                                <button id="Salad" value="30" class="btn btn-sm btn-warning add">ADD</button>
+                                                <div class="fw-bold">$19.75</div>
+                                                <button id="English Breakfast" value="19.75" class="btn btn-sm btn-warning add">ADD</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/frychicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
-                                            <div class="fs-4 fw-bold food-item">Fry Chicken</div>
-                                            <div style="font-size: 12px;">a dish where chicken pieces are coated in seasoned flour or batter and then cooked in hot oil or fat, resulting in a crispy exterior and tender, juicy interior.</div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Nachos</div>
+                                            <div style="font-size: 12px;">A bed of corn torilla chips scrambled with eggs and topped with beef, refried beans, sour cream, and pico de gallo.</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
-                                                <div class="fw-bold">$10</div>
-                                                <button id="Fry&nbsp;Chicken" value="10" class="btn btn-sm btn-warning add">ADD</button>
+                                                <div class="fw-bold">$16.25</div>
+                                                <button id="Breakfast Nachos" value="16.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Waffle Sandwich</div>
+                                            <div style="font-size: 12px;">A waffle stuffed with ham, cheese, sliced tomato and home-made spread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.75</div>
+                                                <button id="Waffle Sandwich" value="16.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pancakes</div>
+                                            <div style="font-size: 12px;">Three pancakes accompanied with meat option bacon, ham or sausage and your choice of honey or syrup.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.75</div>
+                                                <button id="Pancakes" value="13.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">French Toast</div>
+                                            <div style="font-size: 12px;">Three slices of home-made bread soaked in a fresh mixture of milk, eggs, and cinnamon. Served with your choice of bacon, ham or sausage, and syrup or honey.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="French Toast" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Crepes</div>
+                                            <div style="font-size: 12px;">Thin wrapped pancakes filled with cream cheese, fruits and topped with whipped cream. Served with your meat choice of bacon, ham or sausage, and syrup or honey.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.75</div>
+                                                <button id="Crepes" value="17.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Sliders</div>
+                                            <div style="font-size: 12px;">Two Creole buns filled with ham, cheese, beans and eggs.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.75</div>
+                                                <button id="Breakfast Sliders" value="8.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Burrito</div>
+                                            <div style="font-size: 12px;">A home-made flour tortilla filled with scrambled eggs, sausage, beans, and cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.25</div>
+                                                <button id="Breakfast Burrito" value="8.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Midway Chicken Wrap</div>
+                                            <div style="font-size: 12px;">A home-made flour tortilla filled with grilled chicken, beans, lettuce, cheese, and pico de gallo.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$9.50</div>
+                                                <button id="Midway Chicken Wrap" value="9.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mexican Taco</div>
+                                            <div style="font-size: 12px;">A grilled corn tortilla with a home-made mustard sauce filled with diced beef and pico de gallo.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.50</div>
+                                                <button id="Mexican Taco" value="3.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Omelet</div>
+                                            <div style="font-size: 12px;">Eggs filled with onions, sweet peppers, tomatoes, mushrooms, and your choice of ham or bacon, Omelets come with your choice of flour torilla, corn torilla, fry jacks or toast.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.50</div>
+                                                <button id="Omelet" value="17.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Lunch Menu -->
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Small Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id="Small Rice & Beans" value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Regular Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id="Regular Rice & Beans" value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Large Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id="Large Rice & Beans" value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Small Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id="Small Fried Chicken" value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Regular Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id="Regular Fried Chicken" value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Large Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id="Large Fried Chicken" value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Strips</div>
+                                            <div style="font-size: 12px;">Deep fried breaded chicken strips with a side of fries, coleslaw and our home-made ranch dip or sweet and sour sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.25</div>
+                                                <button id="Chicken Strips" value="17.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Beef Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Beef Burger" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Strip Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.25</div>
+                                                <button id="Chicken Strip Burger" value="14.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fish Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$19.75</div>
+                                                <button id="Fish Burger" value="19.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">6pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.00</div>
+                                                <button id="6pc Wings" value="18.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">9pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$24.75</div>
+                                                <button id="9pc Wings" value="24.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">12pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$33.50</div>
+                                                <button id="12pc Wings" value="33.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$10.25</div>
+                                                <button id='7" Pepperoni Pizza' value="10.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.75</div>
+                                                <button id='10" Pepperoni Pizza' value="15.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Meat Lovers Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.25</div>
+                                                <button id='7" Meat Lovers Pizza' value="13.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Meat Lovers Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.00</div>
+                                                <button id='10" Meat Lovers Pizza' value="18.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Hawaiian Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id='7" Hawaiian Pizza' value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Hawaiian Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.00</div>
+                                                <button id='10" Hawaiian Pizza' value="16.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Margarita Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.50</div>
+                                                <button id='7" Margarita Pizza' value="12.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Margarita Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.00</div>
+                                                <button id='10" Margarita Pizza' value="17.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Bianca Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$9.75</div>
+                                                <button id='7" Bianca Pizza' value="9.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Bianca Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.00</div>
+                                                <button id='10" Bianca Pizza' value="15.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">T-bone Steak</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$37.75</div>
+                                                <button id='T-bone Steak' value="37.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Sirloin Steak</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$35.75</div>
+                                                <button id='Sirloin Steak' value="35.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pork Chops</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$22.75</div>
+                                                <button id='Pork Chops' value="22.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fish Fillet</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$36.25</div>
+                                                <button id='Fish Fillet' value="36.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fried Shrimp</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$33.25</div>
+                                                <button id='Fried Shrimp' value="33.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id='Chicken Fajitas' value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Beef Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.50</div>
+                                                <button id='Beef Fajitas' value="18.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Veggie Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.50</div>
+                                                <button id='Veggie Fajitas' value="15.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Alfredo Pasta</div>
+                                            <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled chicken and a sprinkle of fresh basil along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$26.50</div>
+                                                <button id='Chicken Alfredo Pasta' value="26.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Shrimp Alfredo Pasta</div>
+                                            <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled shrimp and a sprinkle of fresh basil along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$34.25</div>
+                                                <button id='Shrimp Alfredo Pasta' value="34.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Spicy Chicken Penne Pasta</div>
+                                            <div style="font-size: 12px;">Sautéed bite sized grilled chicken breast and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$28.50</div>
+                                                <button id='Spicy Chicken Penne Pasta' value="28.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Spicy Shrimp Penne Pasta</div>
+                                            <div style="font-size: 12px;">Sautéed bite sized grilled shrimp and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$37.25</div>
+                                                <button id='Spicy Shrimp Penne Pasta' value="37.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mango Shrimp Ceviche</div>
+                                            <div style="font-size: 12px;">Tender shrimp marinated in fresh citrus juice, tossed with sweet mango, red onion and cilantro. Served with home-made corn tortilla chips and a side of habanero.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$22.50</div>
+                                                <button id='Mango Shrimp Ceviche' value="22.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Caesar Salad</div>
+                                            <div style="font-size: 12px;">Fresh chopped Romaine lettuce, sprinkled with Parmesan cheese and home-made croutons mixed with Caesar dressing. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.00</div>
+                                                <button id='Caesar Salad' value="14.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Super House Salad</div>
+                                            <div style="font-size: 12px;">Fresh chopped Romaine lettuce with sliced cucumber, tomatoes, sliced carrots, onions, sweet corn, crispy bacon bits and fried crushed tortilla chips. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.25</div>
+                                                <button id='Super House Salad' value="13.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kids Menu -->
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Jr. Burger with Potato Chips</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$11.75</div>
+                                                <button id='Jr. Burger with Potato Chips' value="11.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Rice & Beans with Stew Chicken</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id='Rice & Beans with Stew Chicken' value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Tenders with Fries</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.75</div>
+                                                <button id='Chicken Tenders with Fries' value="8.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mini Cheese and Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$10.25</div>
+                                                <button id='Mini Cheese and Pepperoni Pizza' value="10.25" class="btn btn-sm btn-warning add">ADD</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane text-white" id="food" role="tabpanel">
-                            How travel coupons make you a better lover. Why cultural solutions
-                            are the new black. Why mom was right about travel insurances. How
-                            family trip ideas can help you predict the future. <b>How carnival
-                                cruises make you a better lover</b>. Why you'll never succeed at
-                            daily deals. 11 ways cheapest flights can find you the love of your
-                            life. The complete beginner's guide to mission trips.
+                        <div class="tab-pane text-white" id="breakfast" role="tabpanel">
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Midway Breakfast</div>
+                                            <div style="font-size: 12px;">Eggs cooked to your preference accompanied with refried beans, bacon, cheese, and fry jacks.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Midway Breakfast" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Spanish Breakfast</div>
+                                            <div style="font-size: 12px;">Scrambled eggs with onions and local greens or tomatoes accompanied with refried beans, cream, cheese, fried plantains and corn or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.75</div>
+                                                <button id="Spanish Breakfast" value="15.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Huevos Rancheros</div>
+                                            <div style="font-size: 12px;">Sunny side-up eggs on a bed of corn tortillas, tapped with a chef-style tomato salsa, parmesan cheese, refried beans and your choice of bacon, ham or sausage.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Huevos Rancheros" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">English Breakfast</div>
+                                            <div style="font-size: 12px;">Sunny side-up eggs served with bacon, sausage, grilled tomato, baked beans and toast.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$19.75</div>
+                                                <button id="English Breakfast" value="19.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Nachos</div>
+                                            <div style="font-size: 12px;">A bed of corn torilla chips scrambled with eggs and topped with beef, refried beans, sour cream, and pico de gallo.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.25</div>
+                                                <button id="Breakfast Nachos" value="16.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Waffle Sandwich</div>
+                                            <div style="font-size: 12px;">A waffle stuffed with ham, cheese, sliced tomato and home-made spread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.75</div>
+                                                <button id="Waffle Sandwich" value="16.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pancakes</div>
+                                            <div style="font-size: 12px;">Three pancakes accompanied with meat option bacon, ham or sausage and your choice of honey or syrup.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.75</div>
+                                                <button id="Pancakes" value="13.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">French Toast</div>
+                                            <div style="font-size: 12px;">Three slices of home-made bread soaked in a fresh mixture of milk, eggs, and cinnamon. Served with your choice of bacon, ham or sausage, and syrup or honey.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="French Toast" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Crepes</div>
+                                            <div style="font-size: 12px;">Thin wrapped pancakes filled with cream cheese, fruits and topped with whipped cream. Served with your meat choice of bacon, ham or sausage, and syrup or honey.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.75</div>
+                                                <button id="Crepes" value="17.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Sliders</div>
+                                            <div style="font-size: 12px;">Two Creole buns filled with ham, cheese, beans and eggs.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.75</div>
+                                                <button id="Breakfast Sliders" value="8.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Breakfast Burrito</div>
+                                            <div style="font-size: 12px;">A home-made flour tortilla filled with scrambled eggs, sausage, beans, and cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.25</div>
+                                                <button id="Breakfast Burrito" value="8.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Midway Chicken Wrap</div>
+                                            <div style="font-size: 12px;">A home-made flour tortilla filled with grilled chicken, beans, lettuce, cheese, and pico de gallo.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$9.50</div>
+                                                <button id="Midway Chicken Wrap" value="9.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mexican Taco</div>
+                                            <div style="font-size: 12px;">A grilled corn tortilla with a home-made mustard sauce filled with diced beef and pico de gallo.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.50</div>
+                                                <button id="Mexican Taco" value="3.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Omelet</div>
+                                            <div style="font-size: 12px;">Eggs filled with onions, sweet peppers, tomatoes, mushrooms, and your choice of ham or bacon, Omelets come with your choice of flour torilla, corn torilla, fry jacks or toast.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.50</div>
+                                                <button id="Omelet" value="17.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane text-white" id="lunch" role="tabpanel">
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Small Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id="Small Rice & Beans" value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Regular Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id="Regular Rice & Beans" value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Large Rice & Beans</div>
+                                            <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id="Large Rice & Beans" value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Small Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id="Small Fried Chicken" value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Regular Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id="Regular Fried Chicken" value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Large Fried Chicken</div>
+                                            <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id="Large Fried Chicken" value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Strips</div>
+                                            <div style="font-size: 12px;">Deep fried breaded chicken strips with a side of fries, coleslaw and our home-made ranch dip or sweet and sour sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.25</div>
+                                                <button id="Chicken Strips" value="17.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Beef Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.75</div>
+                                                <button id="Beef Burger" value="14.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Strip Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.25</div>
+                                                <button id="Chicken Strip Burger" value="14.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fish Burger</div>
+                                            <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$19.75</div>
+                                                <button id="Fish Burger" value="19.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">6pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.00</div>
+                                                <button id="6pc Wings" value="18.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">9pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$24.75</div>
+                                                <button id="9pc Wings" value="24.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">12pc Wings</div>
+                                            <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$33.50</div>
+                                                <button id="12pc Wings" value="33.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$10.25</div>
+                                                <button id='7" Pepperoni Pizza' value="10.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.75</div>
+                                                <button id='10" Pepperoni Pizza' value="15.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Meat Lovers Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.25</div>
+                                                <button id='7" Meat Lovers Pizza' value="13.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Meat Lovers Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.00</div>
+                                                <button id='10" Meat Lovers Pizza' value="18.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Hawaiian Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.00</div>
+                                                <button id='7" Hawaiian Pizza' value="12.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Hawaiian Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.00</div>
+                                                <button id='10" Hawaiian Pizza' value="16.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Margarita Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$12.50</div>
+                                                <button id='7" Margarita Pizza' value="12.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Margarita Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$17.00</div>
+                                                <button id='10" Margarita Pizza' value="17.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">7" Bianca Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$9.75</div>
+                                                <button id='7" Bianca Pizza' value="9.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">10" Bianca Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.00</div>
+                                                <button id='10" Bianca Pizza' value="15.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">T-bone Steak</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$37.75</div>
+                                                <button id='T-bone Steak' value="37.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Sirloin Steak</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$35.75</div>
+                                                <button id='Sirloin Steak' value="35.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pork Chops</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$22.75</div>
+                                                <button id='Pork Chops' value="22.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fish Fillet</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$36.25</div>
+                                                <button id='Fish Fillet' value="36.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fried Shrimp</div>
+                                            <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$33.25</div>
+                                                <button id='Fried Shrimp' value="33.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$16.50</div>
+                                                <button id='Chicken Fajitas' value="16.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Beef Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.50</div>
+                                                <button id='Beef Fajitas' value="18.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Veggie Fajitas</div>
+                                            <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$15.50</div>
+                                                <button id='Veggie Fajitas' value="15.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Alfredo Pasta</div>
+                                            <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled chicken and a sprinkle of fresh basil along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$26.50</div>
+                                                <button id='Chicken Alfredo Pasta' value="26.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Shrimp Alfredo Pasta</div>
+                                            <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled shrimp and a sprinkle of fresh basil along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$34.25</div>
+                                                <button id='Shrimp Alfredo Pasta' value="34.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Spicy Chicken Penne Pasta</div>
+                                            <div style="font-size: 12px;">Sautéed bite sized grilled chicken breast and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$28.50</div>
+                                                <button id='Spicy Chicken Penne Pasta' value="28.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Spicy Shrimp Penne Pasta</div>
+                                            <div style="font-size: 12px;">Sautéed bite sized grilled shrimp and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$37.25</div>
+                                                <button id='Spicy Shrimp Penne Pasta' value="37.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mango Shrimp Ceviche</div>
+                                            <div style="font-size: 12px;">Tender shrimp marinated in fresh citrus juice, tossed with sweet mango, red onion and cilantro. Served with home-made corn tortilla chips and a side of habanero.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$22.50</div>
+                                                <button id='Mango Shrimp Ceviche' value="22.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Caesar Salad</div>
+                                            <div style="font-size: 12px;">Fresh chopped Romaine lettuce, sprinkled with Parmesan cheese and home-made croutons mixed with Caesar dressing. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$14.00</div>
+                                                <button id='Caesar Salad' value="14.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Super House Salad</div>
+                                            <div style="font-size: 12px;">Fresh chopped Romaine lettuce with sliced cucumber, tomatoes, sliced carrots, onions, sweet corn, crispy bacon bits and fried crushed tortilla chips. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$13.25</div>
+                                                <button id='Super House Salad' value="13.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane text-white" id="kids" role="tabpanel">
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Jr. Burger with Potato Chips</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$11.75</div>
+                                                <button id='Jr. Burger with Potato Chips' value="11.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Rice & Beans with Stew Chicken</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.50</div>
+                                                <button id='Rice & Beans with Stew Chicken' value="7.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Chicken Tenders with Fries</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$8.75</div>
+                                                <button id='Chicken Tenders with Fries' value="8.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mini Cheese and Pepperoni Pizza</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$10.25</div>
+                                                <button id='Mini Cheese and Pepperoni Pizza' value="10.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane text-white" id="side-orders" role="tabpanel">
+                            <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Breakfast Sides</div>
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pancake</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$5.00</div>
+                                                <button id="Pancake" value="5.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pancake Blueberry Filling</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.50</div>
+                                                <button id="Pancake Blueberry Filling" value="3.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pancake Strawberry Filling</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.50</div>
+                                                <button id="Pancake Strawberry Filling" value="3.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Eggs</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.00</div>
+                                                <button id="Eggs" value="3.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Hash Brown</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Hash Brown" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Flour Tortilla</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Flour Tortilla" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Corn Tortillas</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Corn Tortillas" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Toasted Bread</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Toasted Bread" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fried Jacks</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Fried Jacks" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Refried Beans</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Refried Beans" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Bacon</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Bacon" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Ham</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Ham" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Sausages</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Sausages" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Cheese</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.00</div>
+                                                <button id="Cheese" value="3.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Granola</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Granola" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Nutella</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Nutella" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Jalapenos</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Jalapenos" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Habaneros</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Habaneros" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Burger Sides -->
+                            <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Burger Sides</div>
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Cheese</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Cheese" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Bacon</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Bacon" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fries</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Fries" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Onion Rings</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Onion Rings" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Grilled Sweet pepper</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Grilled Sweet pepper" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mushrooms</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Mushrooms" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div>
+                            <!-- Pizza Toppings -->
+                            <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Pizza Toppings</div>
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mushrooms</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Mushrooms" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Sausage</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Sausage" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Green Peppers</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Green Peppers" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pepperoni</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Pepperoni" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Pineapple</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Pineapple" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Olives</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Olives" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Ground Beef</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Ground Beef" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Habanero</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Habanero" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Extra Cheese</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.50</div>
+                                                <button id="Extra Cheese" value="1.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div>
+                            <!-- Salad Sides -->
+                            <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Salad Sides</div>
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Grilled Chicken</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$6.00</div>
+                                                <button id="Grilled Chicken" value="6.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Grilled Shrimp</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.75</div>
+                                                <button id="Grilled Shrimp" value="18.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div>
+                            <!-- Lunch Sides -->
+                            <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Lunch Sides</div>
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Shrimp</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$18.75</div>
+                                                <button id="Shrimp" value="18.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fish</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$19.75</div>
+                                                <button id="Fish" value="19.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Grilled Chicken Breast</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$6.00</div>
+                                                <button id="Grilled Chicken Breast" value="6.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Beef Patty</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$5.75</div>
+                                                <button id="Beef Patty" value="5.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Fries</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Fries" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Mashed Potatoes</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Mashed Potatoes" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Steam Vegetables</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$7.25</div>
+                                                <button id="Steam Vegetables" value="7.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Garden Salad</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Garden Salad" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Potato Wedges</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Potato Wedges" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Rice & Beans</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Rice & Beans" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">White Rice</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="White Rice" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Stew Beans</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Stew Beans" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Garlic Bread</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Garlic Bread" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Onion Rings</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Onion Rings" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Coleslaw</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Coleslaw" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Potato Salad</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$4.50</div>
+                                                <button id="Potato Salad" value="4.50" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Flour Tortilla</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Flour Tortilla" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Corn Tortilla</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Corn Tortilla" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane text-white" id="drinks" role="tabpanel">
-                            Unbelievable healthy snack success stories. 12 facts about safe food
-                            handling tips that will impress your friends. Restaurant weeks by
-                            the numbers. Will mexican food ever rule the world? The 10 best thai
-                            restaurant youtube videos. How restaurant weeks can make you sick.
-                            The complete beginner's guide to cooking healthy food. Unbelievable
-                            food stamp success stories.
-                        </div>
-                        <div class="tab-pane text-white" id="dessert" role="tabpanel">
-                            Why delicious magazines are killing you. Why our world would end if
-                            restaurants disappeared. Why restaurants are on crack about
-                            restaurants. How restaurants are making the world a better place. 8
-                            great articles about minute meals. Why our world would end if
-                            healthy snacks disappeared. Why the world would end without mexican
-                            food. The evolution of chef uniforms.
-                        </div>
-                        <div class="tab-pane text-white" id="starter" role="tabpanel">
-                            Why delicious magazines are killing you. Why our world would end if
-                            restaurants disappeared. Why restaurants are on crack about
-                            restaurants. How restaurants are making the world a better place. 8
-                            great articles about minute meals. Why our world would end if
-                            healthy snacks disappeared. Why the world would end without mexican
-                            food. The evolution of chef uniforms.
+                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Natural Juices</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.75</div>
+                                                <button id="Natural Juices" value="2.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Large Natural Juices</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$3.75</div>
+                                                <button id="Large Natural Juices" value="3.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Iced Tea</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Iced Tea" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Plastic Softdrinks</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.00</div>
+                                                <button id="Plastic Softdrinks" value="2.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Glass Softdrinks</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.25</div>
+                                                <button id="Glass Softdrinks" value="1.25" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Coffee</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Coffee" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Hot Tea</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$1.00</div>
+                                                <button id="Hot Tea" value="1.00" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card custom-card">
+                                    <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
+                                        <div>
+                                            <div class="fs-4 fw-bold food-item">Kids Size Natural Juice</div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div class="fw-bold">$2.75</div>
+                                                <button id='Kids Size Natural Juice' value="2.75" class="btn btn-sm btn-warning add">ADD</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
