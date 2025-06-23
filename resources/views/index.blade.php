@@ -119,9 +119,12 @@
                     </ul>
                 </div>
                 <div class="col-xl-9">
+                    <!-- Search Bar -->
+                    <div class="mb-3"><input type="text" placeholder="Search for an item..." class="form-control searchbar"></div>
+
                     <div class="tab-content mt-2 mt-xl-0">
                         <div class="tab-pane show active text-white" id="allmenu" role="tabpanel">
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <!-- Breakfast Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
@@ -838,7 +841,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="breakfast" role="tabpanel">
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1024,7 +1027,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="lunch" role="tabpanel">
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1512,7 +1515,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="kids" role="tabpanel">
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1561,7 +1564,7 @@
                         </div>
                         <div class="tab-pane text-white" id="side-orders" role="tabpanel">
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Breakfast Sides</div>
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1763,7 +1766,7 @@
                             </div>
                             <!-- Burger Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Burger Sides</div>
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1833,7 +1836,7 @@
                             </div>
                             <!-- Pizza Toppings -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Pizza Toppings</div>
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1936,7 +1939,7 @@
                             </div>
                             <!-- Salad Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Salad Sides</div>
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1962,7 +1965,7 @@
                             </div>
                             <!-- Lunch Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Lunch Sides</div>
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2164,7 +2167,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="drinks" role="tabpanel">
-                            <div style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2323,6 +2326,14 @@
     let cart = [];
 
     $(document)
+        .on('keypress', '.searchbar', function(e) {
+            const searchTerm = $(this).val().toLowerCase();
+
+            $('.allmenu-items .card').each(function () {
+                const itemName = $(this).find('.food-item').text().toLowerCase();
+                $(this).toggle(itemName.includes(searchTerm));
+            });
+        })
         .on('click', '.add', function(e) {
             let item = $(this).attr('id');
             let item_cost = $(this).val();
@@ -2413,7 +2424,7 @@
                             <div>Comments: ${arr.comments}</div>
                         </div>
                         <div>
-                            <span class="me-2">$${arr.item_cost}</span><button id="${index}" class="btn btn-success edit-order me-2"><i class='bx bx-edit'></i></button><button id="${index}" class="btn btn-danger del-order"><i class='bx bx-trash'></i></button>
+                            <span class="me-2">$${arr.item_cost}</span><button id="${index}" class="btn btn-success edit-order me-2"><i class="ri-edit-2-line"></i></button><button id="${index}" class="btn btn-danger del-order"><i class="ri-delete-bin-line"></i></button>
                         </div>
                     </div>
                 `;
