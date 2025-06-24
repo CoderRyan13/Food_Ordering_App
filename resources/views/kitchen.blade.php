@@ -103,7 +103,7 @@
                                 <div class="my-2 py-4 border-bottom border-warning">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="fw-bold">${v.item}</div>
-                                        <div>x${v.quantity} <span class="ms-3">$${v.item_cost}</span> </div>
+                                        <div>x${v.quantity} <span class="ms-3">$${Number(v.item_cost).toFixed(2)}</span> </div>
                                     </div>
                                     <div>${v.comments}</div>
                                 </div>
@@ -133,7 +133,7 @@
                                     <div>${orders}</div>
                                 </div>
                                 <div class="card-footer text-end d-flex align-items-center justify-content-between">
-                                    <div>Total Cost: <span class="fw-bold">$${val.cost_total}</span></div>
+                                    <div>Total Cost: <span class="fw-bold">$${Number(val.cost_total).toFixed(2)}</span></div>
                                     <button id="${val.id}" class="btn btn-success done">Done</button>
                                 </div>
                             </div>

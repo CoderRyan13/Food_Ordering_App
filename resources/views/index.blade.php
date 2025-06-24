@@ -34,12 +34,21 @@
             height: 100vh;
             /* min-height: 100vh; */
         }
+        .side-menu {
+            position: fixed;
+            left: 0;
+            width: 350px;
+            /* background-color: #575653;
+            transition: all 0.5s ease;
+            color: #fff; */
+            height: 100vh;
+        }
         .menu {
             font-size: 26px;
             position: relative;
             list-style-type: none;
-            height: 120px;
-            width: 90%;
+            height: 100px;
+            width: 80%;
             border-radius: 0.8rem;
             background-color: #575653;
             margin: 4px;
@@ -57,7 +66,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #12171e">
     <div class="row">
         <button type="button" class="btn btn-primary mb-2 w-25 open-modal d-none" data-bs-toggle="modal" data-bs-target="#openModal">Open Modal</button>
         <div class="modal fade" id="openModal" tabindex="-1"	aria-labelledby="openModalLabel" aria-hidden="true">
@@ -72,10 +81,10 @@
             </div>
         </div>
     </div>
-    <div class="d-flex" style="background-color: #12171e;">
+    <div class="d-flex">
         <div class="m-4" style="padding-right: 350px;">
             <div class="row">
-                <div class="col-xl-3">
+                <div class="col-xl-3 side-menu">
                     <div class="me-1 bg-white"><img src="{{url('/')}}/midway-icon.webp" alt="westrac" class="border rounded-circle" style="width: 90%; margin-left: 6px;"></div>
                     <div class="fw-bold fs-3 ms-2" style="color: #f7ff66">Menu</div>
 
@@ -118,13 +127,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xl-9">
+                <div class="col-xl-9" style="margin-left: 350px;">
                     <!-- Search Bar -->
-                    <div class="mb-3"><input type="text" placeholder="Search for an item..." class="form-control searchbar"></div>
+                    <div class="mb-3"><input type="text" placeholder="Search menu..." class="form-control searchbar"></div>
 
                     <div class="tab-content mt-2 mt-xl-0">
                         <div class="tab-pane show active text-white" id="allmenu" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <!-- Breakfast Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
@@ -841,7 +850,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="breakfast" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1027,7 +1036,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="lunch" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1515,7 +1524,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="kids" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1564,7 +1573,7 @@
                         </div>
                         <div class="tab-pane text-white" id="side-orders" role="tabpanel">
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Breakfast Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1766,7 +1775,7 @@
                             </div>
                             <!-- Burger Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Burger Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1836,7 +1845,7 @@
                             </div>
                             <!-- Pizza Toppings -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Pizza Toppings</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1939,7 +1948,7 @@
                             </div>
                             <!-- Salad Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Salad Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1965,7 +1974,7 @@
                             </div>
                             <!-- Lunch Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Lunch Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2167,7 +2176,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="drinks" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 350px 350px 350px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2372,7 +2381,7 @@
                     <div class="my-2 py-4 border-bottom border-warning">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="fw-bold">${arr.item}</div>
-                            <div>x${arr.quantity} <span class="ms-3">$${arr.item_cost}</span> </div>
+                            <div>x${arr.quantity} <span class="ms-3">$${arr.item_cost.toFixed(2)}</span> </div>
                         </div>
                         <div>${arr.comments}</div>
                     </div>
@@ -2381,7 +2390,7 @@
             $('.orders').html(html);
 
             $('.item-total').html(`Items (${item_count}) Total`);
-            $('.cost-total').html(`$ ${cost_total}`);
+            $('.cost-total').html(`$ ${cost_total.toFixed(2)}`);
         })
         .on('click', '.tbl', function(e) {
             $('.open-modal').trigger('click');
@@ -2424,7 +2433,7 @@
                             <div>Comments: ${arr.comments}</div>
                         </div>
                         <div>
-                            <span class="me-2">$${arr.item_cost}</span><button id="${index}" class="btn btn-success edit-order me-2"><i class="ri-edit-2-line"></i></button><button id="${index}" class="btn btn-danger del-order"><i class="ri-delete-bin-line"></i></button>
+                            <span class="me-2">$${arr.item_cost.toFixed(2)}</span><button id="${index}" class="btn btn-success edit-order me-2"><i class="ri-edit-2-line"></i></button><button id="${index}" class="btn btn-danger del-order"><i class="ri-delete-bin-line"></i></button>
                         </div>
                     </div>
                 `;
