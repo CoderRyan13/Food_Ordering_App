@@ -82,7 +82,7 @@
         </div>
     </div>
     <div class="d-flex">
-        <div class="m-4" style="padding-right: 350px;">
+        <div class="m-4 flex-grow-1" style="padding-right: 350px;">
             <div class="row">
                 <div class="col-xl-3 side-menu">
                     <div class="me-1 bg-white"><img src="{{url('/')}}/midway-icon.webp" alt="westrac" class="border rounded-circle" style="width: 90%; margin-left: 6px;"></div>
@@ -133,7 +133,7 @@
 
                     <div class="tab-content mt-2 mt-xl-0">
                         <div class="tab-pane show active text-white" id="allmenu" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;"> <!-- auto auto auto; -->
                                 <!-- Breakfast Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
