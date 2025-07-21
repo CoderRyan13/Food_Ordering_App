@@ -31,16 +31,13 @@
             background-color: #575653;
             transition: all 0.5s ease;
             color: #fff;
-            height: 100vh;
-            /* min-height: 100vh; */
+            /* height: 100vh; */
+            min-height: 100vh;
         }
         .side-menu {
             position: fixed;
             left: 0;
             width: 350px;
-            /* background-color: #575653;
-            transition: all 0.5s ease;
-            color: #fff; */
             height: 100vh;
         }
         .menu {
@@ -2272,12 +2269,12 @@
             </div>
         </div>
         <div class="order-details pt-4 ps-4 pe-2 pb-2">
-            <div class="d-flex justify-content-between align-items-center">
+            <!-- <div class="d-flex justify-content-between align-items-center"> -->
                 <div class="fs-2">Order Details</div>
                 <div class="card custom-card">
                     <button class="btn btn-warning tbl fw-bold">T1</button>
                 </div>
-            </div>
+            <!-- </div> -->
             <div class="my-2 pb-2 border-bottom border-warning"><?php date_default_timezone_set("America/Belize"); echo date('Y-m-d H:i:s') ?></div>
             <div class="orders"></div>
             <div class="col-xl-10 position-absolute bottom-0">
@@ -2394,7 +2391,7 @@
         })
         .on('click', '.tbl', function(e) {
             $('.open-modal').trigger('click');
-            $('.modal-title').html(`Choose Table`);
+            $('.modal-title').html(`Choose Table or Add Person`);
             $('.modal-body').html(`
                 <div>
                     <label for="choose_tbl">Choose a Table: </label>
@@ -2412,15 +2409,37 @@
                         <option value="T11">T11</option>
                     </select>
                 </div>
+                <div class="my-4 text-center fw-bold">OR</div>
+                <div>
+                    <label for="add_person">Add Person: </label>
+                    <input type="text" id="add_person" name="add_person" class="form-control">
+                    <label for="choice" class="mt-3">Option: </label>
+                    <select id="choice" name="choice">
+                        <option value="Pick Up">Pick Up</option>
+                        <option value="To Have">To Have</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+                    <div class="d-none del_opt mt-3">
+                        <label for="del_address">Delivery Address: </label>
+                        <input type="text" id="del_address" name="del_address" class="form-control">
+                    </div>
+                </div>
                 <div class="text-end mt-3">
                     <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary tbl-choice">Choose</button>
                 </div>
             `);
         })
+        .on('change', '#choice', function(e) {
+            if($('#choice').val() == "Delivery") { $('.del_opt').removeClass('d-none'); } else {$('.del_opt').addClass('d-none');}
+        })
         .on('click', '.tbl-choice', function(e) {
             $('.btn-close').trigger('click');
-            $('.tbl').html($('#choose_tbl').val());
+            if($('#add_person').val()) {
+                $('.tbl').html($('#add_person').val() + " - " + $('#choice').val() + " " + `<span class="fw-normal">${$('#del_address').val()}</span>`);
+            } else {
+                $('.tbl').html($('#choose_tbl').val());
+            }
         })
         .on('click', '.next', function(e) {
             let html = "";

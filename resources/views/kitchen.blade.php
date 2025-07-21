@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="fw-bold fs-2 my-2 mx-4" style="color: #f7ff66;">Midway Orders</div>
-    <div class="contents m-4" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: auto auto auto auto;"></div>
+    <div class="contents m-4" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 440px 440px 440px 440px;"></div>
     <div class="toast-container position-fixed top-0 end-0 p-3">
         <div id="toastAlert" class="toast colored-toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toastHead toast-header text-fixed-white">
@@ -98,14 +98,18 @@
                     let orders = '';
 
                     $.each(data, function(key, val) {
+                        let comments = "";
                         $.each(JSON.parse(val.orders), function(k, v) {
+                            if(v.comments) {
+                                comments = v.comments;
+                            }
                             orders += `
                                 <div class="my-2 py-4 border-bottom border-warning">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="fw-bold">${v.item}</div>
                                         <div>x${v.quantity} <span class="ms-3">$${Number(v.item_cost).toFixed(2)}</span> </div>
                                     </div>
-                                    <div>${v.comments}</div>
+                                    <div>${comments}</div>
                                 </div>
                             `;
                         });
