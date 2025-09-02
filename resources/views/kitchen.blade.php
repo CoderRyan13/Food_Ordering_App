@@ -99,7 +99,11 @@
 
                     $.each(data, function(key, val) {
                         let comments = "";
+                        let subitems = '';
                         $.each(JSON.parse(val.orders), function(k, v) {
+                            if(v.subitems) {
+                                subitems = v.subitems;
+                            }
                             if(v.comments) {
                                 comments = v.comments;
                             }
@@ -109,7 +113,8 @@
                                         <div class="fw-bold">${v.item}</div>
                                         <div>x${v.quantity} <span class="ms-3">$${Number(v.item_cost).toFixed(2)}</span> </div>
                                     </div>
-                                    <div>${comments}</div>
+                                    <div>${subitems}</div>
+                                    <div class="mt-2 ms-2">${comments}</div>
                                 </div>
                             `;
                         });

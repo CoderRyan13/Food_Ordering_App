@@ -2343,30 +2343,6 @@
         .on('click', '.add', function(e) {
             let item = $(this).attr('id');
             let item_cost = $(this).val();
-            let submenu = '';
-
-            if(item == 'Pancakes') {
-                submenu = `
-                    <div class="ms-4 mt-2">
-                        <div class="fw-bold">Side Orders:</div>
-                        <div class="mt-2">Add <span class="Extra-Pancake">Extra Pancake</span> - $5.00 <input class="ms-2" type="checkbox" id="Extra_Pancake" value="5.00"></div>
-                        <div class="mt-2">Add <span class="Pancake-Blueberry-Filling">Pancake Blueberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Blueberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Pancake-Strawberry-Filling">Pancake Strawberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Strawberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Eggs">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="Eggs" value="3.00"></div>
-                    </div>
-                `;
-            } else if(item == 'Pancakes') {
-                submenu = `
-                    <div class="ms-4 mt-2">
-                        <div class="fw-bold">Side Orders:</div>
-                        <div class="mt-2">Add <span class="Extra-Pancake">Extra Pancake</span> - $5.00 <input class="ms-2" type="checkbox" id="Extra_Pancake" value="5.00"></div>
-                        <div class="mt-2">Add <span class="Pancake-Blueberry-Filling">Pancake Blueberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Blueberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Pancake-Strawberry-Filling">Pancake Strawberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Strawberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Eggs">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="Eggs" value="3.00"></div>
-                    </div>
-                `;
-            }
-
             $('.open-modal').trigger('click');
             $('.modal-title').html(`Add ${item} Order`);
             $('.modal-body').html(`
@@ -2374,10 +2350,9 @@
                     <label for="quantity">Quantity: </label>
                     <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control">
                 </div>
-                <div>${submenu}</div>
                 <div class="mt-3">
                     <p><label for="comments">Comments: </label></p>
-                    <textarea id="comments" name="comments" rows="3" class="form-control"></textarea>
+                    <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
                 </div>
                 <div class="text-end mt-3">
                     <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
@@ -2387,41 +2362,15 @@
             $('.add-order').prop({item: item, item_cost: item_cost});
         })
         .on('click', '.add-order', function(e) {
-            let subitems = '';
-            let subcosts = 0;
-
-            // Pancakes
-            if($('#Extra_Pancake:checked').val()) {
-                subitems += `${$('.Extra-Pancake').html()}, `;
-                subcosts += Number($('#Extra_Pancake').val());
-            };
-
-            if($('#Pancake_Blueberry_Filling:checked').val()) {
-                subitems += `${$('.Pancake-Blueberry-Filling').html()}, `;
-                subcosts += Number($('#Pancake_Blueberry_Filling').val());
-            };
-
-            if($('#Pancake_Strawberry_Filling:checked').val()) {
-                subitems += `${$('.Pancake-Strawberry-Filling').html()}, `;
-                subcosts += Number($('#Pancake_Strawberry_Filling').val());
-            };
-
-            if($('#Eggs:checked').val()) {
-                subitems += `${$('.Eggs').html()}, `;
-                subcosts += Number($('#Eggs').val());
-            };
-            // End Pancakes
-
-
             $('.btn-close').trigger('click');
             let item = this.item;
             let quantity = $('#quantity').val();
-            let item_cost = (Number(this.item_cost) * quantity) + Number(subcosts);
+            let item_cost = Number(this.item_cost) * quantity;
             let comments = $('#comments').val();
 
             item_count += Number(quantity);
             cost_total += item_cost;
-            cart.push({item: item, quantity: quantity, item_cost: item_cost, comments: comments, subitems: subitems});
+            cart.push({item: item, quantity: quantity, item_cost: item_cost, comments: comments});
 
             let html = '';
             cart.forEach(function(arr, index) {
@@ -2431,8 +2380,7 @@
                             <div class="fw-bold">${arr.item}</div>
                             <div>x${arr.quantity} <span class="ms-3">$${arr.item_cost.toFixed(2)}</span> </div>
                         </div>
-                        <div>${arr.subitems}</div>
-                        <div class="mt-2 ms-2">${arr.comments}</div>
+                        <div>${arr.comments}</div>
                     </div>
                 `;
             });
@@ -2552,7 +2500,6 @@
             let id       = this.id;
             let quantity = cart[id].quantity;
             let comments = cart[id].comments;
-            let subitems = cart[id].subitems;
 
             setTimeout(() => {$('.open-modal').trigger('click');}, 500);
             $('.modal-title').html(`Edit Order`);
@@ -2561,7 +2508,6 @@
                     <label for="quantity">Quantity: </label>
                     <input type="number" id="quantity" name="quantity" min="1" value="${quantity}" class="form-control edit-quantity">
                 </div>
-                <div>${subitems}</div>
                 <div class="mt-3">
                     <p><label for="comments">Comments: </label></p>
                     <textarea id="comments" name="comments" rows="4" class="form-control edit-comments">${comments}</textarea>
@@ -2593,8 +2539,7 @@
                             <div class="fw-bold">${arr.item}</div>
                             <div>x${arr.quantity} <span class="ms-3">$${arr.item_cost}</span> </div>
                         </div>
-                        <div>${arr.subitems}</div>
-                        <div class="mt-2 ms-2">${arr.comments}</div>
+                        <div>${arr.comments}</div>
                     </div>
                 `;
             });
