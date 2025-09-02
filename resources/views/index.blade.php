@@ -2345,24 +2345,100 @@
             let item_cost = $(this).val();
             let submenu = '';
 
-            if(item == 'Pancakes') {
+            if(item == 'Pancakes') { // Pancakes
                 submenu = `
                     <div class="ms-4 mt-2">
                         <div class="fw-bold">Side Orders:</div>
                         <div class="mt-2">Add <span class="Extra-Pancake">Extra Pancake</span> - $5.00 <input class="ms-2" type="checkbox" id="Extra_Pancake" value="5.00"></div>
                         <div class="mt-2">Add <span class="Pancake-Blueberry-Filling">Pancake Blueberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Blueberry_Filling" value="3.50"></div>
                         <div class="mt-2">Add <span class="Pancake-Strawberry-Filling">Pancake Strawberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Strawberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Eggs">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="Eggs" value="3.00"></div>
+                        <div class="mt-2">Add <span class="EggsPan">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="EggsPan" value="3.00"></div>
                     </div>
                 `;
-            } else if(item == 'Pancakes') {
+            } else if(item == 'Beef Burger' || item == 'Chicken Strip Burger' || item == 'Fish Burger') { // Burgers
                 submenu = `
                     <div class="ms-4 mt-2">
                         <div class="fw-bold">Side Orders:</div>
-                        <div class="mt-2">Add <span class="Extra-Pancake">Extra Pancake</span> - $5.00 <input class="ms-2" type="checkbox" id="Extra_Pancake" value="5.00"></div>
-                        <div class="mt-2">Add <span class="Pancake-Blueberry-Filling">Pancake Blueberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Blueberry_Filling" value="3.50"></div>
-                        <div class="mt-2">Add <span class="Pancake-Strawberry-Filling">Pancake Strawberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Strawberry_Filling" value="3.50"></div>
+                        <div class="mt-2">Add <span class="Extra-CheeseB">Extra Cheese</span> - $2.00 <input class="ms-2" type="checkbox" id="Extra_CheeseB" value="2.00"></div>
+                        <div class="mt-2">Add <span class="BaconB">Bacon</span> - $2.00 <input class="ms-2" type="checkbox" id="BaconB" value="2.00"></div>
+                        <div class="mt-2">Add <span class="FriesB">Fries</span> - $4.50 <input class="ms-2" type="checkbox" id="FriesB" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Onion-RingsB">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_RingsB" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Grilled-Sweet-pepper">Grilled Sweet pepper</span> - $2.00 <input class="ms-2" type="checkbox" id="Grilled_Sweet_pepper" value="2.00"></div>
+                        <div class="mt-2">Add <span class="MushroomsB">Mushrooms</span> - $2.00 <input class="ms-2" type="checkbox" id="MushroomsB" value="2.00"></div>
+                    </div>
+                `;
+            } else if(item == '7" Pepperoni Pizza' || item == '10" Pepperoni Pizza' || item == '7" Meat Lovers Pizza' || item == '10" Meat Lovers Pizza' || item == '7" Hawaiian Pizza'
+                || item == '10" Hawaiian Pizza' || item == '7" Margarita Pizza' || item == '10" Margarita Pizza' || item == '7" Bianca Pizza' || item == '10" Bianca Pizza' ) { // Pizza
+                submenu = `
+                    <div class="ms-4 mt-2">
+                        <div class="mt-2">Add <span class="MushroomsP">Mushrooms</span> - $1.50 <input class="ms-2" type="checkbox" id="MushroomsP" value="1.50"></div>
+                        <div class="mt-2">Add <span class="SausageP">Sausage</span> - $1.50 <input class="ms-2" type="checkbox" id="SausageP" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Green-Peppers">Green Peppers</span> - $1.50 <input class="ms-2" type="checkbox" id="Green_Peppers" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Pepperoni">Pepperoni</span> - $1.50 <input class="ms-2" type="checkbox" id="Pepperoni" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Pineapple">Pineapple</span> - $1.50 <input class="ms-2" type="checkbox" id="Pineapple" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Olives">Olives</span> - $1.50 <input class="ms-2" type="checkbox" id="Olives" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Ground-Beef">Ground Beef</span> - $1.50 <input class="ms-2" type="checkbox" id="Ground_Beef" value="1.50"></div>
+                        <div class="mt-2">Add <span class="HabaneroP">Habanero</span> - $1.50 <input class="ms-2" type="checkbox" id="HabaneroP" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Extra-CheeseP">Extra Cheese</span> - $1.50 <input class="ms-2" type="checkbox" id="Extra_CheeseP" value="1.50"></div>
+                    </div>
+                `;
+            } else if(item == 'Caesar Salad' || item == 'Super House Salad') { // Salad
+                submenu = `
+                    <div class="ms-4 mt-2">
+                        <div class="fw-bold">Side Orders:</div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken">Grilled Chicken</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Grilled-Shrimp">Grilled Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Grilled_Shrimp" value="18.75"></div>
+                    </div>
+                `;
+            } else if(item == 'Midway Breakfast' || item == 'Spanish Breakfast' || item == 'Huevos Rancheros' || item == 'English Breakfast' || item == 'Breakfast Nachos' || item == 'Waffle Sandwich'
+                || item == 'French Toast' || item == 'Crepes' || item == 'Breakfast Sliders' || item == 'Breakfast Burrito' || item == 'Midway Chicken Wrap' || item == 'Mexican Taco' || item == 'Omelet' ) 
+                { // Breakfast
+                submenu = `
+                    <div class="ms-4 mt-2">
+                        <div class="fw-bold">Side Orders:</div>
                         <div class="mt-2">Add <span class="Eggs">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="Eggs" value="3.00"></div>
+                        <div class="mt-2">Add <span class="Hash-Brown">Hash Brown</span> - $4.50 <input class="ms-2" type="checkbox" id="Hash_Brown" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-Tortilla">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_Tortilla" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-Tortillas">Corn Tortillas</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_Tortillas" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Toasted-Bread">Toasted Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Toasted_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Fried-Jacks">Fried Jacks</span> - $4.50 <input class="ms-2" type="checkbox" id="Fried_Jacks" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Refried-Beans">Refried Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Refried_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Bacon">Bacon</span> - $4.50 <input class="ms-2" type="checkbox" id="Bacon" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Ham">Ham</span> - $4.50 <input class="ms-2" type="checkbox" id="Ham" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Sausages">Sausages</span> - $4.50 <input class="ms-2" type="checkbox" id="Sausages" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Cheese">Cheese</span> - $3.00 <input class="ms-2" type="checkbox" id="Cheese" value="3.00"></div>
+                        <div class="mt-2">Add <span class="Granola">Granola</span> - $4.50 <input class="ms-2" type="checkbox" id="Granola" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Nutella">Nutella</span> - $4.50 <input class="ms-2" type="checkbox" id="Nutella" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Jalapenos">Jalapenos</span> - $1.50 <input class="ms-2" type="checkbox" id="Jalapenos" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Habaneros">Habaneros</span> - $1.50 <input class="ms-2" type="checkbox" id="Habaneros" value="1.50"></div>
+                    </div>
+                `;
+            } else if(item == 'Small Rice & Beans' || item == 'Regular Rice & Beans' || item == 'Large Rice & Beans' || item == 'Small Fried Chicken' || item == 'Regular Fried Chicken' || item == 'Large Fried Chicken'
+                || item == 'Chicken Strips' || item == '6pc Wings' || item == '9pc Wings' || item == '12pc Wings' || item == 'T-bone Steak' || item == 'Sirloin Steak' || item == 'Pork Chops' || item == 'Fish Fillet' 
+                || item == 'Fried Shrimp' || item == 'Chicken Fajitas' || item == 'Beef Fajitas' || item == 'Veggie Fajitas' || item == 'Chicken Alfredo Pasta' || item == 'Shrimp Alfredo Pasta' || item == 'Spicy Chicken Penne Pasta' 
+                || item == 'Spicy Shrimp Penne Pasta' || item == 'Mango Shrimp Ceviche' ) 
+                { // Lunch
+                submenu = `
+                    <div class="ms-4 mt-2">
+                        <div class="fw-bold">Side Orders:</div>
+                        <div class="mt-2">Add <span class="Shrimp">Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Shrimp" value="18.75"></div>
+                        <div class="mt-2">Add <span class="Fish">Fish</span> - $19.75 <input class="ms-2" type="checkbox" id="Fish" value="19.75"></div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken-Breast">Grilled Chicken Breast</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken_Breast" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Beef-Patty">Beef Patty</span> - $5.75 <input class="ms-2" type="checkbox" id="Beef_Patty" value="5.75"></div>
+                        <div class="mt-2">Add <span class="Fries">Fries</span> - $4.50 <input class="ms-2" type="checkbox" id="Fries" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Mashed-Potatoes">Mashed Potatoes</span> - $4.50 <input class="ms-2" type="checkbox" id="Mashed_Potatoes" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Steam-Vegetables">Steam Vegetables</span> - $7.25 <input class="ms-2" type="checkbox" id="Steam_Vegetables" value="7.25"></div>
+                        <div class="mt-2">Add <span class="Garden-Salad">Garden Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Garden_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Wedges">Potato Wedges</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Wedges" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Rice-Beans">Rice & Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Rice_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="White-Rice">White Rice</span> - $4.50 <input class="ms-2" type="checkbox" id="White_Rice" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Stew-Beans">Stew Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Stew_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garlic-Bread">Garlic Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Garlic_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Onion-Rings">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_Rings" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Coleslaw">Coleslaw</span> - $4.50 <input class="ms-2" type="checkbox" id="Coleslaw" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Salad">Potato Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
                     </div>
                 `;
             }
@@ -2395,22 +2471,234 @@
                 subitems += `${$('.Extra-Pancake').html()}, `;
                 subcosts += Number($('#Extra_Pancake').val());
             };
-
             if($('#Pancake_Blueberry_Filling:checked').val()) {
                 subitems += `${$('.Pancake-Blueberry-Filling').html()}, `;
                 subcosts += Number($('#Pancake_Blueberry_Filling').val());
             };
-
             if($('#Pancake_Strawberry_Filling:checked').val()) {
                 subitems += `${$('.Pancake-Strawberry-Filling').html()}, `;
                 subcosts += Number($('#Pancake_Strawberry_Filling').val());
             };
+            if($('#EggsPan:checked').val()) {
+                subitems += `${$('.EggsPan').html()}, `;
+                subcosts += Number($('#EggsPan').val());
+            };
+            // End Pancakes
 
+            // Burgers
+            if($('#Extra_CheeseB:checked').val()) {
+                subitems += `${$('.Extra-CheeseB').html()}, `;
+                subcosts += Number($('#Extra_CheeseB').val());
+            };
+            if($('#BaconB:checked').val()) {
+                subitems += `${$('.BaconB').html()}, `;
+                subcosts += Number($('#BaconB').val());
+            };
+            if($('#FriesB:checked').val()) {
+                subitems += `${$('.FriesB').html()}, `;
+                subcosts += Number($('#FriesB').val());
+            };
+            if($('#Onion_RingsB:checked').val()) {
+                subitems += `${$('.Onion-RingsB').html()}, `;
+                subcosts += Number($('#Onion_RingsB').val());
+            };
+            if($('#Grilled_Sweet_pepper:checked').val()) {
+                subitems += `${$('.Grilled-Sweet-pepper').html()}, `;
+                subcosts += Number($('#Grilled_Sweet_pepper').val());
+            };
+            if($('#MushroomsB:checked').val()) {
+                subitems += `${$('.MushroomsB').html()}, `;
+                subcosts += Number($('#MushroomsB').val());
+            };
+            // End Burgers
+
+            // Pizza Toppings
+            if($('#MushroomsP:checked').val()) {
+                subitems += `${$('.MushroomsP').html()}, `;
+                subcosts += Number($('#MushroomsP').val());
+            };
+            if($('#SausageP:checked').val()) {
+                subitems += `${$('.SausageP').html()}, `;
+                subcosts += Number($('#SausageP').val());
+            };
+            if($('#Green_Peppers:checked').val()) {
+                subitems += `${$('.Green-Peppers').html()}, `;
+                subcosts += Number($('#Green_Peppers').val());
+            };
+            if($('#Pepperoni:checked').val()) {
+                subitems += `${$('.Pepperoni').html()}, `;
+                subcosts += Number($('#Pepperoni').val());
+            };
+            if($('#Pineapple:checked').val()) {
+                subitems += `${$('.Pineapple').html()}, `;
+                subcosts += Number($('#Pineapple').val());
+            };
+            if($('#Olives:checked').val()) {
+                subitems += `${$('.Olives').html()}, `;
+                subcosts += Number($('#Olives').val());
+            };
+            if($('#Ground_Beef:checked').val()) {
+                subitems += `${$('.Ground-Beef').html()}, `;
+                subcosts += Number($('#Ground_Beef').val());
+            };
+            if($('#HabaneroP:checked').val()) {
+                subitems += `${$('.HabaneroP').html()}, `;
+                subcosts += Number($('#HabaneroP').val());
+            };
+            if($('#Extra_CheeseP:checked').val()) {
+                subitems += `${$('.Extra-CheeseP').html()}, `;
+                subcosts += Number($('#Extra_CheeseP').val());
+            };
+            // End Pizza Toppings
+
+            // Salad Sides
+            if($('#Grilled_Chicken:checked').val()) {
+                subitems += `${$('.Grilled-Chicken').html()}, `;
+                subcosts += Number($('#Grilled_Chicken').val());
+            };
+            if($('#Grilled_Shrimp:checked').val()) {
+                subitems += `${$('.Grilled-Shrimp').html()}, `;
+                subcosts += Number($('#Grilled_Shrimp').val());
+            };
+            // End Salad Sides
+
+            // Breakfast
             if($('#Eggs:checked').val()) {
                 subitems += `${$('.Eggs').html()}, `;
                 subcosts += Number($('#Eggs').val());
             };
-            // End Pancakes
+            if($('#Hash_Brown:checked').val()) {
+                subitems += `${$('.Hash-Brown').html()}, `;
+                subcosts += Number($('#Hash_Brown').val());
+            };
+            if($('#Flour_Tortilla:checked').val()) {
+                subitems += `${$('.Flour-Tortilla').html()}, `;
+                subcosts += Number($('#Flour_Tortilla').val());
+            };
+            if($('#Corn_Tortillas:checked').val()) {
+                subitems += `${$('.Corn-Tortillas').html()}, `;
+                subcosts += Number($('#Corn_Tortillas').val());
+            };
+            if($('#Toasted_Bread:checked').val()) {
+                subitems += `${$('.Toasted-Bread').html()}, `;
+                subcosts += Number($('#Toasted_Bread').val());
+            };
+            if($('#Fried_Jacks:checked').val()) {
+                subitems += `${$('.Fried-Jacks').html()}, `;
+                subcosts += Number($('#Fried_Jacks').val());
+            };
+            if($('#Refried_Beans:checked').val()) {
+                subitems += `${$('.Refried-Beans').html()}, `;
+                subcosts += Number($('#Refried_Beans').val());
+            };
+            if($('#Bacon:checked').val()) {
+                subitems += `${$('.Bacon').html()}, `;
+                subcosts += Number($('#Bacon').val());
+            };
+            if($('#Ham:checked').val()) {
+                subitems += `${$('.Ham').html()}, `;
+                subcosts += Number($('#Ham').val());
+            };
+            if($('#Sausages:checked').val()) {
+                subitems += `${$('.Sausages').html()}, `;
+                subcosts += Number($('#Sausages').val());
+            };
+            if($('#Cheese:checked').val()) {
+                subitems += `${$('.Cheese').html()}, `;
+                subcosts += Number($('#Cheese').val());
+            };
+            if($('#Granola:checked').val()) {
+                subitems += `${$('.Granola').html()}, `;
+                subcosts += Number($('#Granola').val());
+            };
+            if($('#Nutella:checked').val()) {
+                subitems += `${$('.Nutella').html()}, `;
+                subcosts += Number($('#Nutella').val());
+            };
+            if($('#Jalapenos:checked').val()) {
+                subitems += `${$('.Jalapenos').html()}, `;
+                subcosts += Number($('#Jalapenos').val());
+            };
+            if($('#Habaneros:checked').val()) {
+                subitems += `${$('.Habaneros').html()}, `;
+                subcosts += Number($('#Habaneros').val());
+            };
+            // End Breakfast
+
+            // Lunch
+            if($('#Shrimp:checked').val()) {
+                subitems += `${$('.Shrimp').html()}, `;
+                subcosts += Number($('#Shrimp').val());
+            };
+            if($('#Fish:checked').val()) {
+                subitems += `${$('.Fish').html()}, `;
+                subcosts += Number($('#Fish').val());
+            };
+            if($('#Grilled_Chicken_Breast:checked').val()) {
+                subitems += `${$('.Grilled-Chicken-Breast').html()}, `;
+                subcosts += Number($('#Grilled_Chicken_Breast').val());
+            };
+            if($('#Beef_Patty:checked').val()) {
+                subitems += `${$('.Beef-Patty').html()}, `;
+                subcosts += Number($('#Beef_Patty').val());
+            };
+            if($('#Fries:checked').val()) {
+                subitems += `${$('.Fries').html()}, `;
+                subcosts += Number($('#Fries').val());
+            };
+            if($('#Mashed_Potatoes:checked').val()) {
+                subitems += `${$('.Mashed-Potatoes').html()}, `;
+                subcosts += Number($('#Mashed_Potatoes').val());
+            };
+            if($('#Steam_Vegetables:checked').val()) {
+                subitems += `${$('.Steam-Vegetables').html()}, `;
+                subcosts += Number($('#Steam_Vegetables').val());
+            };
+            if($('#Garden_Salad:checked').val()) {
+                subitems += `${$('.Garden-Salad').html()}, `;
+                subcosts += Number($('#Garden_Salad').val());
+            };
+            if($('#Potato_Wedges:checked').val()) {
+                subitems += `${$('.Potato-Wedges').html()}, `;
+                subcosts += Number($('#Potato_Wedges').val());
+            };
+            if($('#Rice_Beans:checked').val()) {
+                subitems += `${$('.Rice-Beans').html()}, `;
+                subcosts += Number($('#Rice_Beans').val());
+            };
+            if($('#White_Rice:checked').val()) {
+                subitems += `${$('.White-Rice').html()}, `;
+                subcosts += Number($('#White_Rice').val());
+            };
+            if($('#Stew_Beans:checked').val()) {
+                subitems += `${$('.Stew-Beans').html()}, `;
+                subcosts += Number($('#Stew_Beans').val());
+            };
+            if($('#Garlic_Bread:checked').val()) {
+                subitems += `${$('.Garlic-Bread').html()}, `;
+                subcosts += Number($('#Garlic_Bread').val());
+            };
+            if($('#Onion_Rings:checked').val()) {
+                subitems += `${$('.Onion-Rings').html()}, `;
+                subcosts += Number($('#Onion_Rings').val());
+            };
+            if($('#Coleslaw:checked').val()) {
+                subitems += `${$('.Coleslaw').html()}, `;
+                subcosts += Number($('#Coleslaw').val());
+            };
+            if($('#Potato_Salad:checked').val()) {
+                subitems += `${$('.Potato-Salad').html()}, `;
+                subcosts += Number($('#Potato_Salad').val());
+            };
+            if($('#Flour_TortillaL:checked').val()) {
+                subitems += `${$('.Flour-TortillaL').html()}, `;
+                subcosts += Number($('#Flour_TortillaL').val());
+            };
+            if($('#Corn_TortillaL:checked').val()) {
+                subitems += `${$('.Corn-TortillaL').html()}, `;
+                subcosts += Number($('#Corn_TortillaL').val());
+            };
+            // End Lunch
 
 
             $('.btn-close').trigger('click');
