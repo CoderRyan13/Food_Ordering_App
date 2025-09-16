@@ -110,7 +110,7 @@
                                 <span class="nav-item ms-2">Kids</span>
                             </a>
                         </li>
-                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu">
+                        <li class="nav-item d-flex align-items-center justify-content-center mb-3 menu d-none">
                             <a class="nav-link text-decoration-none text-white food px-3 py-2" data-bs-toggle="tab" role="tab" aria-current="page" href="#side-orders" aria-selected="true" style="margin-left: -15px;">
                                 <i class="ri-restaurant-2-fill"></i>
                                 <span class="nav-item ms-2">Side Orders</span>
@@ -160,7 +160,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/huevos-rancheros.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Huevos Rancheros</div>
                                             <div style="font-size: 12px;">Sunny side-up eggs on a bed of corn tortillas, tapped with a chef-style tomato salsa, parmesan cheese, refried beans and your choice of bacon, ham or sausage.</div>
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/english-breakfast.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">English Breakfast</div>
                                             <div style="font-size: 12px;">Sunny side-up eggs served with bacon, sausage, grilled tomato, baked beans and toast.</div>
@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/breakfast-nachos.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Breakfast Nachos</div>
                                             <div style="font-size: 12px;">A bed of corn torilla chips scrambled with eggs and topped with beef, refried beans, sour cream, and pico de gallo.</div>
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/waffle-sandwich.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Waffle Sandwich</div>
                                             <div style="font-size: 12px;">A waffle stuffed with ham, cheese, sliced tomato and home-made spread.</div>
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/pancakes.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Pancakes</div>
                                             <div style="font-size: 12px;">Three pancakes accompanied with meat option bacon, ham or sausage and your choice of honey or syrup.</div>
@@ -225,7 +225,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/french-toast.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">French Toast</div>
                                             <div style="font-size: 12px;">Three slices of home-made bread soaked in a fresh mixture of milk, eggs, and cinnamon. Served with your choice of bacon, ham or sausage, and syrup or honey.</div>
@@ -238,7 +238,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/crepes.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Crepes</div>
                                             <div style="font-size: 12px;">Thin wrapped pancakes filled with cream cheese, fruits and topped with whipped cream. Served with your meat choice of bacon, ham or sausage, and syrup or honey.</div>
@@ -290,7 +290,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/mexican-taco.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Mexican Taco</div>
                                             <div style="font-size: 12px;">A grilled corn tortilla with a home-made mustard sauce filled with diced beef and pico de gallo.</div>
@@ -303,7 +303,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/omelet.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Omelet</div>
                                             <div style="font-size: 12px;">Eggs filled with onions, sweet peppers, tomatoes, mushrooms, and your choice of ham or bacon, Omelets come with your choice of flour torilla, corn torilla, fry jacks or toast.</div>
@@ -317,7 +317,7 @@
                                 <!-- Lunch Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Small Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -330,7 +330,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Regular Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -343,7 +343,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Large Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -356,7 +356,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Small Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -369,7 +369,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Regular Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -382,7 +382,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Large Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -395,7 +395,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Chicken Strips.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Strips</div>
                                             <div style="font-size: 12px;">Deep fried breaded chicken strips with a side of fries, coleslaw and our home-made ranch dip or sweet and sour sauce.</div>
@@ -408,7 +408,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Beef Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Beef Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -421,7 +421,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Chicken Strip Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Strip Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -434,7 +434,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fish Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fish Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -447,7 +447,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">6pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -460,7 +460,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">9pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -473,7 +473,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">12pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -510,7 +510,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Meat Lovers Pizza.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">7" Meat Lovers Pizza</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
@@ -522,7 +522,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Meat Lovers Pizza.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">10" Meat Lovers Pizza</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
@@ -606,7 +606,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/T-Bone Steak.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">T-bone Steak</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
@@ -619,7 +619,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Sirloin Steak.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Sirloin Steak</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
@@ -632,7 +632,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Pork Chops.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Pork Chops</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -645,7 +645,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fish Fillet.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fish Fillet</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -658,7 +658,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Shrimp.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fried Shrimp</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -671,7 +671,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -684,7 +684,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Beef Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -697,7 +697,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Veggie Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -710,7 +710,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Alfredo Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Alfredo Pasta</div>
                                             <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled chicken and a sprinkle of fresh basil along with a side of garlic bread.</div>
@@ -736,7 +736,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Spicy Penne Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Spicy Chicken Penne Pasta</div>
                                             <div style="font-size: 12px;">Sautéed bite sized grilled chicken breast and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
@@ -749,7 +749,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Spicy Penne Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Spicy Shrimp Penne Pasta</div>
                                             <div style="font-size: 12px;">Sautéed bite sized grilled shrimp and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
@@ -762,7 +762,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Mango Shrimp Ceviche.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Mango Shrimp Ceviche</div>
                                             <div style="font-size: 12px;">Tender shrimp marinated in fresh citrus juice, tossed with sweet mango, red onion and cilantro. Served with home-made corn tortilla chips and a side of habanero.</div>
@@ -775,7 +775,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Caesar Salad.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Caesar Salad</div>
                                             <div style="font-size: 12px;">Fresh chopped Romaine lettuce, sprinkled with Parmesan cheese and home-made croutons mixed with Caesar dressing. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
@@ -788,7 +788,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Super House Salad.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Super House Salad</div>
                                             <div style="font-size: 12px;">Fresh chopped Romaine lettuce with sliced cucumber, tomatoes, sliced carrots, onions, sweet corn, crispy bacon bits and fried crushed tortilla chips. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
@@ -876,7 +876,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/huevos-rancheros.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Huevos Rancheros</div>
                                             <div style="font-size: 12px;">Sunny side-up eggs on a bed of corn tortillas, tapped with a chef-style tomato salsa, parmesan cheese, refried beans and your choice of bacon, ham or sausage.</div>
@@ -889,7 +889,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/english-breakfast.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">English Breakfast</div>
                                             <div style="font-size: 12px;">Sunny side-up eggs served with bacon, sausage, grilled tomato, baked beans and toast.</div>
@@ -902,7 +902,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/breakfast-nachos.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Breakfast Nachos</div>
                                             <div style="font-size: 12px;">A bed of corn torilla chips scrambled with eggs and topped with beef, refried beans, sour cream, and pico de gallo.</div>
@@ -915,7 +915,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/waffle-sandwich.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Waffle Sandwich</div>
                                             <div style="font-size: 12px;">A waffle stuffed with ham, cheese, sliced tomato and home-made spread.</div>
@@ -928,7 +928,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/pancakes.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Pancakes</div>
                                             <div style="font-size: 12px;">Three pancakes accompanied with meat option bacon, ham or sausage and your choice of honey or syrup.</div>
@@ -941,7 +941,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/french-toast.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">French Toast</div>
                                             <div style="font-size: 12px;">Three slices of home-made bread soaked in a fresh mixture of milk, eggs, and cinnamon. Served with your choice of bacon, ham or sausage, and syrup or honey.</div>
@@ -954,7 +954,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/crepes.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Crepes</div>
                                             <div style="font-size: 12px;">Thin wrapped pancakes filled with cream cheese, fruits and topped with whipped cream. Served with your meat choice of bacon, ham or sausage, and syrup or honey.</div>
@@ -1006,7 +1006,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/mexican-taco.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Mexican Taco</div>
                                             <div style="font-size: 12px;">A grilled corn tortilla with a home-made mustard sauce filled with diced beef and pico de gallo.</div>
@@ -1019,7 +1019,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/omelet.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Omelet</div>
                                             <div style="font-size: 12px;">Eggs filled with onions, sweet peppers, tomatoes, mushrooms, and your choice of ham or bacon, Omelets come with your choice of flour torilla, corn torilla, fry jacks or toast.</div>
@@ -1036,7 +1036,7 @@
                             <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Small Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -1049,7 +1049,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Regular Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -1062,7 +1062,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Large Rice & Beans</div>
                                             <div style="font-size: 12px;">Rice and beans served with stew chicken, fried plantain and your choice of coleslaw or potato salad.</div>
@@ -1075,7 +1075,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Small Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -1088,7 +1088,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Regular Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -1101,7 +1101,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Chicken.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Large Fried Chicken</div>
                                             <div style="font-size: 12px;">Crispy fried chicken seasoned with our special spice mix, served with fries and coleslaw.</div>
@@ -1114,7 +1114,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Chicken Strips.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Strips</div>
                                             <div style="font-size: 12px;">Deep fried breaded chicken strips with a side of fries, coleslaw and our home-made ranch dip or sweet and sour sauce.</div>
@@ -1127,7 +1127,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Beef Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Beef Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -1140,7 +1140,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Chicken Strip Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Strip Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -1153,7 +1153,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fish Burger.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fish Burger</div>
                                             <div style="font-size: 12px;">Burger come with cheese, sliced tomatoes, lettuce, pickles and onions.</div>
@@ -1166,7 +1166,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">6pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -1179,7 +1179,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">9pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -1192,7 +1192,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Wings.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">12pc Wings</div>
                                             <div style="font-size: 12px;">Deep fried wings served with your choice of sauce and either garlic bread or fries. Sause Flavors: BBQ, Hot, Spicy Mango, Lemon Pepper, Spicy Orange</div>
@@ -1229,7 +1229,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Meat Lovers Pizza.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">7" Meat Lovers Pizza</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
@@ -1241,7 +1241,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Meat Lovers Pizza.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">10" Meat Lovers Pizza</div>
                                             <div class="d-flex justify-content-between align-items-center mt-2">
@@ -1325,7 +1325,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/T-Bone Steak.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">T-bone Steak</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
@@ -1338,7 +1338,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Sirloin Steak.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Sirloin Steak</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges. Steak Sauce options: Mushroom Sauce, Mustard Sauce, BBQ Sauce.</div>
@@ -1351,7 +1351,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Pork Chops.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Pork Chops</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -1364,7 +1364,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fish Fillet.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fish Fillet</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -1377,7 +1377,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fried Shrimp.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Fried Shrimp</div>
                                             <div style="font-size: 12px;">Comes along with two side options: Potato salad, Garden Salad, Coleslaw, Fries, Steam Vegetables, Rice & Beans, White Rice, or Potato Wedges.</div>
@@ -1390,7 +1390,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -1403,7 +1403,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Beef Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -1416,7 +1416,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Fajitas.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Veggie Fajitas</div>
                                             <div style="font-size: 12px;">Served with a side of refried beans, sour cream, pico de gallo and your choice of white rice or flour tortilla.</div>
@@ -1429,7 +1429,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Alfredo Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Chicken Alfredo Pasta</div>
                                             <div style="font-size: 12px;">Rich and creamy Alfredo Sauce and Fettuccini noodles topped with grilled chicken and a sprinkle of fresh basil along with a side of garlic bread.</div>
@@ -1455,7 +1455,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Spicy Penne Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Spicy Chicken Penne Pasta</div>
                                             <div style="font-size: 12px;">Sautéed bite sized grilled chicken breast and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
@@ -1468,7 +1468,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Spicy Penne Pasta.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Spicy Shrimp Penne Pasta</div>
                                             <div style="font-size: 12px;">Sautéed bite sized grilled shrimp and mushrooms mixed in a creamy tomato sauce and Penne noodles along with a side of garlic bread.</div>
@@ -1481,7 +1481,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Mango Shrimp Ceviche.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Mango Shrimp Ceviche</div>
                                             <div style="font-size: 12px;">Tender shrimp marinated in fresh citrus juice, tossed with sweet mango, red onion and cilantro. Served with home-made corn tortilla chips and a side of habanero.</div>
@@ -1494,7 +1494,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Caesar Salad.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Caesar Salad</div>
                                             <div style="font-size: 12px;">Fresh chopped Romaine lettuce, sprinkled with Parmesan cheese and home-made croutons mixed with Caesar dressing. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
@@ -1507,7 +1507,7 @@
                                 </div>
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
-                                        <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
+                                        <div class="text-center"><img src="{{url('/')}}/midway/Super House Salad.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
                                         <div>
                                             <div class="fs-4 fw-bold food-item">Super House Salad</div>
                                             <div style="font-size: 12px;">Fresh chopped Romaine lettuce with sliced cucumber, tomatoes, sliced carrots, onions, sweet corn, crispy bacon bits and fried crushed tortilla chips. Dressings: Ranch, Caesar, Clear Italian, Mexican Dressing or Blue Cheese.</div>
