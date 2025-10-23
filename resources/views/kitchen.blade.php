@@ -173,22 +173,6 @@
                 confirmButtonText: 'Yes!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    const printWindow = window.open('', '', 'height=600,width=800');
-
-                    printWindow.document.write('<html><head><title>Print Order</title>');
-
-                    // Load Bootstrap CSS (replace with your Bootstrap version if needed)
-                    printWindow.document.write('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">');
-
-                    printWindow.document.write('</head><body>');
-                    printWindow.document.write($(`.card-${id}`).html());
-                    printWindow.document.write('</body></html>');
-
-                    printWindow.document.close();
-                    printWindow.focus();
-                    printWindow.print();
-                    printWindow.close();
-
                     $.ajax({
                         type		: 'POST',
                         url		: "{{url ('/')}}/remove_order",

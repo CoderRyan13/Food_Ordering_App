@@ -8,7 +8,12 @@ use DB;
 class MenuCtrl extends Controller
 {
     public function recieve_orders(Request $request) {
-        $orders = DB::select("SELECT * FROM public.midway_orders ORDER BY created_on ASC");
+        $orders = DB::select("SELECT * FROM public.midway_orders WHERE is_done = FALSE AND created_on::date = CURRENT_DATE ORDER BY created_on ASC");
+        return json_encode($orders);
+    }
+
+    public function recieve_Allorders(Request $request) {
+        $orders = DB::select("SELECT * FROM public.midway_orders ORDER BY created_on DESC");
         return json_encode($orders);
     }
 
@@ -42,8 +47,11 @@ class MenuCtrl extends Controller
 
     public function remove_order(Request $request) {
         $id = $request->id;
+        $fields = [
+            'is_done'  => true,
+        ];
 
-        if (DB::table('public.midway_orders')->where('id', $id)->delete()) {
+        if (DB::table('public.midway_orders')->where('id', $id)->update($fields)) {
             return json_encode('y');
         } else {
             return json_encode('n');

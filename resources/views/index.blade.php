@@ -54,20 +54,40 @@
             border-radius: 0.8rem;
             height: 120px;
             width: 110%;
-            background-color: #f7ff66;
+            background-color: #f7ff66; /* #f95001 */
             color: #12171e !important;
         }
         .nav-tabs .nav-link.active {
             color: #f7ff66 !important; /* Yellow text */
             background-color: transparent; /* Optional: Keep background transparent */
         }
+        .container {
+            display: grid;
+            column-gap: 30px;
+            row-gap: 30px;
+            grid-template-columns: 354px 354px 354px;
+        }
+
+        /* For smaller screens (phones) */
+            @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 354px 354px;
+            }
+        }
+
+        /* For very small screens if you want 1 column */
+        /* @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 354px;
+            }
+        } */
     </style>
 </head>
 <body style="background-color: #12171e">
     <div class="row">
         <button type="button" class="btn btn-primary mb-2 w-25 open-modal d-none" data-bs-toggle="modal" data-bs-target="#openModal">Open Modal</button>
         <div class="modal fade" id="openModal" tabindex="-1"	aria-labelledby="openModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-md">
+            <div class="modal-dialog modal-md modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: #575653; color: white;">
                         <h6 class="modal-title" id="openModalLabel1">#</h6>
@@ -130,7 +150,7 @@
 
                     <div class="tab-content mt-2 mt-xl-0">
                         <div class="tab-pane show active text-white" id="allmenu" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;"> <!-- auto auto auto; -->
+                            <div class="allmenu-items container"> <!-- auto auto auto; -->
                                 <!-- Breakfast Menu -->
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
@@ -847,7 +867,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="breakfast" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/curry.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1033,7 +1053,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="lunch" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div class="text-center"><img src="{{url('/')}}/midway/Rice and Beans.jpg" alt="curry" style="width: 100%; height: 180px; border-radius: 8px;"></div>
@@ -1521,7 +1541,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="kids" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1570,7 +1590,7 @@
                         </div>
                         <div class="tab-pane text-white" id="side-orders" role="tabpanel">
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Breakfast Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1772,7 +1792,7 @@
                             </div>
                             <!-- Burger Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Burger Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1842,7 +1862,7 @@
                             </div>
                             <!-- Pizza Toppings -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Pizza Toppings</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1945,7 +1965,7 @@
                             </div>
                             <!-- Salad Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Salad Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -1971,7 +1991,7 @@
                             </div>
                             <!-- Lunch Sides -->
                             <div class="fw-bold fs-3 ms-2 border-bottom border-warning my-3" style="color: #f7ff66">Lunch Sides</div>
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2173,7 +2193,7 @@
                             </div>
                         </div>
                         <div class="tab-pane text-white" id="drinks" role="tabpanel">
-                            <div class="allmenu-items" style="display: grid; column-gap: 30px; row-gap: 30px; grid-template-columns: 354px 354px 354px;">
+                            <div class="allmenu-items container">
                                 <div class="card custom-card">
                                     <div class="card-body d-flex flex-column" style="background-color: #f7ff66; font-family: 'Lucida Console', 'Courier New', monospace;">
                                         <div>
@@ -2299,6 +2319,20 @@
     </div>
 </body>
 <script>
+    // Utility to parse URL parameters
+    function getUrlParams() {
+        const params = {};
+        const queryString = window.location.search.slice(1);
+        const pairs = queryString.split("&");
+
+        for (const pair of pairs) {
+            if (!pair) continue;
+            const [key, value] = pair.split("=");
+            params[decodeURIComponent(key)] = decodeURIComponent(value || '');
+        }
+
+        return params;
+    }
     let display_alert = (title, text, class_name) => {
         if (0 == class_name) {
             class_name = 'bg-danger-subtle';
@@ -2332,6 +2366,36 @@
     let cart = [];
 
     $(document)
+        .ready(function(e) {
+            const params = getUrlParams();
+
+            // Check and fill fields by class name
+            if (params.table) {
+                $('.tbl').html(params.table);
+            };
+        })
+        .on('change', '.side-order', function(e) {
+            const checkedCount = $('.side-order:checked').length;
+
+            if (checkedCount >= 2) {
+                // Disable all unchecked boxes
+                $('.side-order:not(:checked)').prop('disabled', true);
+            } else {
+                // Re-enable all when less than 2 are selected
+                $('.side-order').prop('disabled', false);
+            }
+        })
+        .on('change', '.sauce-order', function(e) {
+            const checkedCount = $('.sauce-order:checked').length;
+
+            if (checkedCount >= 1) {
+                // Disable all unchecked boxes
+                $('.sauce-order:not(:checked)').prop('disabled', true);
+            } else {
+                // Re-enable all when less than 1 are selected
+                $('.sauce-order').prop('disabled', false);
+            }
+        })
         .on('keypress', '.searchbar', function(e) {
             const searchTerm = $(this).val().toLowerCase();
 
@@ -2354,6 +2418,23 @@
                         <div class="mt-2">Add <span class="Pancake-Strawberry-Filling">Pancake Strawberry Filling</span> - $3.50 <input class="ms-2" type="checkbox" id="Pancake_Strawberry_Filling" value="3.50"></div>
                         <div class="mt-2">Add <span class="EggsPan">Eggs</span> - $3.00 <input class="ms-2" type="checkbox" id="EggsPan" value="3.00"></div>
                     </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Extra Side Orders:</div>
+                        <div class="mt-2">Add <span class="Hash-Brown">Hash Brown</span> - $4.50 <input class="ms-2" type="checkbox" id="Hash_Brown" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-Tortilla">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_Tortilla" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-Tortillas">Corn Tortillas</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_Tortillas" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Toasted-Bread">Toasted Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Toasted_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Fried-Jacks">Fried Jacks</span> - $4.50 <input class="ms-2" type="checkbox" id="Fried_Jacks" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Refried-Beans">Refried Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Refried_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Bacon">Bacon</span> - $4.50 <input class="ms-2" type="checkbox" id="Bacon" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Ham">Ham</span> - $4.50 <input class="ms-2" type="checkbox" id="Ham" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Sausages">Sausages</span> - $4.50 <input class="ms-2" type="checkbox" id="Sausages" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Cheese">Cheese</span> - $3.00 <input class="ms-2" type="checkbox" id="Cheese" value="3.00"></div>
+                        <div class="mt-2">Add <span class="Granola">Granola</span> - $4.50 <input class="ms-2" type="checkbox" id="Granola" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Nutella">Nutella</span> - $4.50 <input class="ms-2" type="checkbox" id="Nutella" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Jalapenos">Jalapenos</span> - $1.50 <input class="ms-2" type="checkbox" id="Jalapenos" value="1.50"></div>
+                        <div class="mt-2">Add <span class="Habaneros">Habaneros</span> - $1.50 <input class="ms-2" type="checkbox" id="Habaneros" value="1.50"></div>
+                    </div>
                 `;
             } else if(item == 'Beef Burger' || item == 'Chicken Strip Burger' || item == 'Fish Burger') { // Burgers
                 submenu = `
@@ -2365,6 +2446,25 @@
                         <div class="mt-2">Add <span class="Onion-RingsB">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_RingsB" value="4.50"></div>
                         <div class="mt-2">Add <span class="Grilled-Sweet-pepper">Grilled Sweet pepper</span> - $2.00 <input class="ms-2" type="checkbox" id="Grilled_Sweet_pepper" value="2.00"></div>
                         <div class="mt-2">Add <span class="MushroomsB">Mushrooms</span> - $2.00 <input class="ms-2" type="checkbox" id="MushroomsB" value="2.00"></div>
+                    </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Extra Side Orders:</div>
+                        <div class="mt-2">Add <span class="Shrimp">Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Shrimp" value="18.75"></div>
+                        <div class="mt-2">Add <span class="Fish">Fish</span> - $19.75 <input class="ms-2" type="checkbox" id="Fish" value="19.75"></div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken-Breast">Grilled Chicken Breast</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken_Breast" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Beef-Patty">Beef Patty</span> - $5.75 <input class="ms-2" type="checkbox" id="Beef_Patty" value="5.75"></div>
+                        <div class="mt-2">Add <span class="Mashed-Potatoes">Mashed Potatoes</span> - $4.50 <input class="ms-2" type="checkbox" id="Mashed_Potatoes" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Steam-Vegetables">Steam Vegetables</span> - $7.25 <input class="ms-2" type="checkbox" id="Steam_Vegetables" value="7.25"></div>
+                        <div class="mt-2">Add <span class="Garden-Salad">Garden Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Garden_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Wedges">Potato Wedges</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Wedges" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Rice-Beans">Rice & Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Rice_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="White-Rice">White Rice</span> - $4.50 <input class="ms-2" type="checkbox" id="White_Rice" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Stew-Beans">Stew Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Stew_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garlic-Bread">Garlic Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Garlic_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Coleslaw">Coleslaw</span> - $4.50 <input class="ms-2" type="checkbox" id="Coleslaw" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Salad">Potato Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
                     </div>
                 `;
             } else if(item == '7" Pepperoni Pizza' || item == '10" Pepperoni Pizza' || item == '7" Meat Lovers Pizza' || item == '10" Meat Lovers Pizza' || item == '7" Hawaiian Pizza'
@@ -2381,6 +2481,27 @@
                         <div class="mt-2">Add <span class="HabaneroP">Habanero</span> - $1.50 <input class="ms-2" type="checkbox" id="HabaneroP" value="1.50"></div>
                         <div class="mt-2">Add <span class="Extra-CheeseP">Extra Cheese</span> - $1.50 <input class="ms-2" type="checkbox" id="Extra_CheeseP" value="1.50"></div>
                     </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Extra Side Orders:</div>
+                        <div class="mt-2">Add <span class="Shrimp">Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Shrimp" value="18.75"></div>
+                        <div class="mt-2">Add <span class="Fish">Fish</span> - $19.75 <input class="ms-2" type="checkbox" id="Fish" value="19.75"></div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken-Breast">Grilled Chicken Breast</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken_Breast" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Beef-Patty">Beef Patty</span> - $5.75 <input class="ms-2" type="checkbox" id="Beef_Patty" value="5.75"></div>
+                        <div class="mt-2">Add <span class="Fries">Fries</span> - $4.50 <input class="ms-2" type="checkbox" id="Fries" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Mashed-Potatoes">Mashed Potatoes</span> - $4.50 <input class="ms-2" type="checkbox" id="Mashed_Potatoes" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Steam-Vegetables">Steam Vegetables</span> - $7.25 <input class="ms-2" type="checkbox" id="Steam_Vegetables" value="7.25"></div>
+                        <div class="mt-2">Add <span class="Garden-Salad">Garden Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Garden_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Wedges">Potato Wedges</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Wedges" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Rice-Beans">Rice & Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Rice_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="White-Rice">White Rice</span> - $4.50 <input class="ms-2" type="checkbox" id="White_Rice" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Stew-Beans">Stew Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Stew_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garlic-Bread">Garlic Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Garlic_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Onion-Rings">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_Rings" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Coleslaw">Coleslaw</span> - $4.50 <input class="ms-2" type="checkbox" id="Coleslaw" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Salad">Potato Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
+                    </div>
                 `;
             } else if(item == 'Caesar Salad' || item == 'Super House Salad') { // Salad
                 submenu = `
@@ -2388,6 +2509,27 @@
                         <div class="fw-bold">Side Orders:</div>
                         <div class="mt-2">Add <span class="Grilled-Chicken">Grilled Chicken</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken" value="6.00"></div>
                         <div class="mt-2">Add <span class="Grilled-Shrimp">Grilled Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Grilled_Shrimp" value="18.75"></div>
+                    </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Extra Side Orders:</div>
+                        <div class="mt-2">Add <span class="Shrimp">Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Shrimp" value="18.75"></div>
+                        <div class="mt-2">Add <span class="Fish">Fish</span> - $19.75 <input class="ms-2" type="checkbox" id="Fish" value="19.75"></div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken-Breast">Grilled Chicken Breast</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken_Breast" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Beef-Patty">Beef Patty</span> - $5.75 <input class="ms-2" type="checkbox" id="Beef_Patty" value="5.75"></div>
+                        <div class="mt-2">Add <span class="Fries">Fries</span> - $4.50 <input class="ms-2" type="checkbox" id="Fries" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Mashed-Potatoes">Mashed Potatoes</span> - $4.50 <input class="ms-2" type="checkbox" id="Mashed_Potatoes" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Steam-Vegetables">Steam Vegetables</span> - $7.25 <input class="ms-2" type="checkbox" id="Steam_Vegetables" value="7.25"></div>
+                        <div class="mt-2">Add <span class="Garden-Salad">Garden Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Garden_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Wedges">Potato Wedges</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Wedges" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Rice-Beans">Rice & Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Rice_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="White-Rice">White Rice</span> - $4.50 <input class="ms-2" type="checkbox" id="White_Rice" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Stew-Beans">Stew Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Stew_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garlic-Bread">Garlic Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Garlic_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Onion-Rings">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_Rings" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Coleslaw">Coleslaw</span> - $4.50 <input class="ms-2" type="checkbox" id="Coleslaw" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-Salad">Potato Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
                     </div>
                 `;
             } else if(item == 'Midway Breakfast' || item == 'Spanish Breakfast' || item == 'Huevos Rancheros' || item == 'English Breakfast' || item == 'Breakfast Nachos' || item == 'Waffle Sandwich'
@@ -2414,8 +2556,8 @@
                     </div>
                 `;
             } else if(item == 'Small Rice & Beans' || item == 'Regular Rice & Beans' || item == 'Large Rice & Beans' || item == 'Small Fried Chicken' || item == 'Regular Fried Chicken' || item == 'Large Fried Chicken'
-                || item == 'Chicken Strips' || item == '6pc Wings' || item == '9pc Wings' || item == '12pc Wings' || item == 'T-bone Steak' || item == 'Sirloin Steak' || item == 'Pork Chops' || item == 'Fish Fillet' 
-                || item == 'Fried Shrimp' || item == 'Chicken Fajitas' || item == 'Beef Fajitas' || item == 'Veggie Fajitas' || item == 'Chicken Alfredo Pasta' || item == 'Shrimp Alfredo Pasta' || item == 'Spicy Chicken Penne Pasta' 
+                || item == 'Chicken Strips' || item == '6pc Wings' || item == '9pc Wings' || item == '12pc Wings' || item == 'Chicken Fajitas' || item == 'Beef Fajitas' || item == 'Veggie Fajitas' 
+                || item == 'Chicken Alfredo Pasta' || item == 'Shrimp Alfredo Pasta' || item == 'Spicy Chicken Penne Pasta' 
                 || item == 'Spicy Shrimp Penne Pasta' || item == 'Mango Shrimp Ceviche' ) 
                 { // Lunch
                 submenu = `
@@ -2437,6 +2579,39 @@
                         <div class="mt-2">Add <span class="Onion-Rings">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_Rings" value="4.50"></div>
                         <div class="mt-2">Add <span class="Coleslaw">Coleslaw</span> - $4.50 <input class="ms-2" type="checkbox" id="Coleslaw" value="4.50"></div>
                         <div class="mt-2">Add <span class="Potato-Salad">Potato Salad</span> - $4.50 <input class="ms-2" type="checkbox" id="Potato_Salad" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
+                        <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
+                    </div>
+                `;
+            } else if(item == 'T-bone Steak' || item == 'Sirloin Steak' || item == 'Pork Chops' || item == 'Fish Fillet' || item == 'Fried Shrimp') { // Protein Dishes
+                submenu = `
+                    <div class="ms-4 mt-2">
+                        <div class="fw-bold">Select 2 Side Orders:</div>
+                        <div class="mt-2">Add <span class="Potato-SaladF">Potato Salad</span> <input class="ms-2 side-order" type="checkbox" id="Potato_SaladF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garden-SaladF">Garden Salad</span> <input class="ms-2 side-order" type="checkbox" id="Garden_SaladF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="ColeslawF">Coleslaw</span> <input class="ms-2 side-order" type="checkbox" id="ColeslawF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="FriesF">Fries</span> <input class="ms-2 side-order" type="checkbox" id="FriesF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Steam-VegetablesF">Steam Vegetables</span> <input class="ms-2 side-order" type="checkbox" id="Steam_VegetablesF" value="7.25"></div>
+                        <div class="mt-2">Add <span class="Rice-BeansF">Rice & Beans</span> <input class="ms-2 side-order" type="checkbox" id="Rice_BeansF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="White-RiceF">White Rice</span> <input class="ms-2 side-order" type="checkbox" id="White_RiceF" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Potato-WedgesF">Potato Wedges</span> <input class="ms-2 side-order" type="checkbox" id="Potato_WedgesF" value="4.50"></div>
+                    </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Select a Steak sauce option:</div>
+                        <div class="mt-2">Add <span class="Mushroom-Sauce">Mushroom Sauce</span> <input class="ms-2 sauce-order" type="checkbox" id="Mushroom_Sauce" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Mustard-Sauce">Mustard Sauce</span> <input class="ms-2 sauce-order" type="checkbox" id="Mustard_Sauce" value="4.50"></div>
+                        <div class="mt-2">Add <span class="BBQ-Sauce">BBQ Sauce</span> <input class="ms-2 sauce-order" type="checkbox" id="BBQ_Sauce" value="4.50"></div>
+                    </div>
+                    <div class="ms-4 py-2 my-2 border-top">
+                        <div class="fw-bold">Extra Side Orders:</div>
+                        <div class="mt-2">Add <span class="Shrimp">Shrimp</span> - $18.75 <input class="ms-2" type="checkbox" id="Shrimp" value="18.75"></div>
+                        <div class="mt-2">Add <span class="Fish">Fish</span> - $19.75 <input class="ms-2" type="checkbox" id="Fish" value="19.75"></div>
+                        <div class="mt-2">Add <span class="Grilled-Chicken-Breast">Grilled Chicken Breast</span> - $6.00 <input class="ms-2" type="checkbox" id="Grilled_Chicken_Breast" value="6.00"></div>
+                        <div class="mt-2">Add <span class="Beef-Patty">Beef Patty</span> - $5.75 <input class="ms-2" type="checkbox" id="Beef_Patty" value="5.75"></div>
+                        <div class="mt-2">Add <span class="Mashed-Potatoes">Mashed Potatoes</span> - $4.50 <input class="ms-2" type="checkbox" id="Mashed_Potatoes" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Stew-Beans">Stew Beans</span> - $4.50 <input class="ms-2" type="checkbox" id="Stew_Beans" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Garlic-Bread">Garlic Bread</span> - $4.50 <input class="ms-2" type="checkbox" id="Garlic_Bread" value="4.50"></div>
+                        <div class="mt-2">Add <span class="Onion-Rings">Onion Rings</span> - $4.50 <input class="ms-2" type="checkbox" id="Onion_Rings" value="4.50"></div>
                         <div class="mt-2">Add <span class="Flour-TortillaL">Flour Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Flour_TortillaL" value="1.00"></div>
                         <div class="mt-2">Add <span class="Corn-TortillaL">Corn Tortilla</span> - $1.00 <input class="ms-2" type="checkbox" id="Corn_TortillaL" value="1.00"></div>
                     </div>
@@ -2700,6 +2875,42 @@
             };
             // End Lunch
 
+            // Protein Dishes
+            if($('#Potato_SaladF:checked').val()) {
+                subitems += `${$('.Potato-SaladF').html()}, `;
+            };
+            if($('#Garden_SaladF:checked').val()) {
+                subitems += `${$('.Garden-SaladF').html()}, `;
+            };
+            if($('#ColeslawF:checked').val()) {
+                subitems += `${$('.ColeslawF').html()}, `;
+            };
+            if($('#FriesF:checked').val()) {
+                subitems += `${$('.FriesF').html()}, `;
+            };
+            if($('#Steam_VegetablesF:checked').val()) {
+                subitems += `${$('.Steam-VegetablesF').html()}, `;
+            };
+            if($('#Rice_BeansF:checked').val()) {
+                subitems += `${$('.Rice-BeansF').html()}, `;
+            };
+            if($('#White_RiceF:checked').val()) {
+                subitems += `${$('.White-RiceF').html()}, `;
+            };
+            if($('#Potato_WedgesF:checked').val()) {
+                subitems += `${$('.Potato-WedgesF').html()}, `;
+            };
+            //Sauce
+            if($('#Mushroom_Sauce:checked').val()) {
+                subitems += `${$('.Mushroom-Sauce').html()}, `;
+            };
+            if($('#Mustard_Sauce:checked').val()) {
+                subitems += `${$('.Mustard-Sauce').html()}, `;
+            };
+            if($('#BBQ_Sauce:checked').val()) {
+                subitems += `${$('.BBQ-Sauce').html()}, `;
+            };
+            // End Protein Dishes
 
             $('.btn-close').trigger('click');
             let item = this.item;
